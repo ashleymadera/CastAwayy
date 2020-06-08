@@ -1,5 +1,6 @@
-# CastAway <!-- omit in toc -->
-![Mobile](https://i.imgur.com/rEhMYM3.png)
+  ![Mobile](https://i.imgur.com/rEhMYM3.png)
+  # CastAway <!-- omit in toc -->
+
 
 - [Overview](#overview)
 - [MVP](#mvp)
