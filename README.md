@@ -69,7 +69,7 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 #### Component Tree
 
-![Component Tree](https://i.imgur.com/yae9I6e.png)
+![Component Tree](https://i.imgur.com/NljoRgl.png)
 
 #### Component Hierarchy
 
