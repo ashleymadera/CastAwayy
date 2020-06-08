@@ -1,5 +1,5 @@
-# CastAway README <!-- omit in toc -->
-
+# CastAway <!-- omit in toc -->
+![Mobile](https://i.imgur.com/rEhMYM3.png)
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -56,15 +56,14 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
+- Mobile View
 ![Mobile](https://i.imgur.com/5bzhCS9.png)
 
-- Mobile View
+- Desktop View
 
 ![Desktop](https://i.imgur.com/yae9I6e.png)
 
-- Desktop View
+
 
 
 #### Component Tree
