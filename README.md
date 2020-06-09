@@ -58,16 +58,17 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 #### Wireframes
 
 - Mobile View
-![Mobile](https://i.imgur.com/5bzhCS9.png)
+![Home/Project Details](https://i.imgur.com/5bzhCS9.png)
 
 -Login
 
-![Mobile](https://i.imgur.com/U02vDKg.png)
+![Login/Signup](https://i.imgur.com/U02vDKg.png)
+
 - Desktop View
 
-![Desktop](https://i.imgur.com/yae9I6e.png)
-
-
+![Home](https://i.imgur.com/ewk4ouB.png)
+![Project Details](https://i.imgur.com/G4ofyi7.png)
+![Projects/Edit/Create](https://i.imgur.com/FbPripK.png)
 
 
 #### Component Tree
