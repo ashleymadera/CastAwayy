@@ -46,10 +46,10 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Rails | _Lorem ipsum dolor sit amet, consectetur._ |
-|     CORs      | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _An open-source JavaScript library for building user interfaces.._ |
+|   React Router   | _React Router is a collection of navigational components that compose declaratively with your application._ |
+| Rails | _A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC)._ |
+|     CORs      | _Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin._ |
 
 <br>
 
