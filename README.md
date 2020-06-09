@@ -69,6 +69,7 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 ![Home](https://i.imgur.com/ewk4ouB.png)
 ![Project Details](https://i.imgur.com/G4ofyi7.png)
 ![Projects/Edit/Create](https://i.imgur.com/FbPripK.png)
+![Create/Edit Pattern](https://i.imgur.com/1ijOipn.png)
 
 
 #### Component Tree
@@ -134,7 +135,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/t5nLbOs.png)
+![ERD](https://i.imgur.com/evpQLt9.png)
 
 
 <br>
