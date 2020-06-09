@@ -37,7 +37,7 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 - _Clean, bug free web appilcation_
 - _Aesthetically pleasing design_
-- _Filtered/search functionality_
+
 
 <br>
 
@@ -141,7 +141,8 @@ src
 ***
 
 ## Post-MVP
-
+- _Filtered/search functionality_
+- _Connect/Share to social media/blog outlets_
 
 
 ***
