@@ -37,7 +37,7 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 - _Clean, bug free web appilcation_
 - _Aesthetically pleasing design_
-- _Filtered/search functionality_
+
 
 <br>
 
@@ -46,10 +46,10 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Rails | _Lorem ipsum dolor sit amet, consectetur._ |
-|     CORs      | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _An open-source JavaScript library for building user interfaces.._ |
+|   React Router   | _React Router is a collection of navigational components that compose declaratively with your application._ |
+| Rails | _A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC)._ |
+|     CORs      | _Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin._ |
 
 <br>
 
@@ -58,13 +58,19 @@ _The **CastAway** MVP will consist of a RESTful Api used through a responsive Re
 #### Wireframes
 
 - Mobile View
-![Mobile](https://i.imgur.com/5bzhCS9.png)
+![Home/Project Details](https://i.imgur.com/5bzhCS9.png)
+
+-Login
+
+![Login/Signup](https://i.imgur.com/U02vDKg.png)
 
 - Desktop View
 
-![Desktop](https://i.imgur.com/yae9I6e.png)
-
-
+![Home](https://i.imgur.com/ewk4ouB.png)
+![Project Details](https://i.imgur.com/G4ofyi7.png)
+![Projects/Edit/Create](https://i.imgur.com/FbPripK.png)
+![Create/Edit Pattern](https://i.imgur.com/1ijOipn.png)
+![Account](https://i.imgur.com/rF11jyZ.png)
 
 
 #### Component Tree
@@ -130,7 +136,7 @@ src
 
 #### ERD Model
 
-![ERD](https://i.imgur.com/PaRCTwQ.png)
+![ERD](https://i.imgur.com/evpQLt9.png)
 
 
 <br>
@@ -138,7 +144,8 @@ src
 ***
 
 ## Post-MVP
-
+- _Filtered/search functionality_
+- _Connect/Share to social media/blog outlets_
 
 
 ***
