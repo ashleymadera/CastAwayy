@@ -8,19 +8,21 @@ export default function Header(props) {
       {
         props.currentAdmin
           ?
-          <>{props.currentAdmin.username}<button onClick={props.handleLogout}>Logout</button></>
+          <>
+            {props.currentAdmin.username}
+            <button onClick={props.handleLogout}>Logout</button></>
           :
           <Link to='/admin/login'>Login/Register</Link>
       }
       <hr />
-      {/* {
+      {
         props.currentUser && (
           <nav>
-            <NavLink to="/foods">Foods</NavLink>
-            <NavLink to="/flavors">Flavors</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
+            {/* <NavLink to="/flavors">Flavors</NavLink> */}
           </nav>
         )
-      } */}
+      }
     </div>
   )
 }
