@@ -2113,3 +2113,52 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 122ms (Views: 26.7ms | ActiveRecord: 76.8ms | Allocations: 7119)
 
 
+Started GET "/projects" for ::1 at 2020-06-12 13:55:50 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:11:in `index'
+Completed 200 OK in 43ms (Views: 16.8ms | ActiveRecord: 21.0ms | Allocations: 7221)
+
+
+Started GET "/projects" for ::1 at 2020-06-12 13:56:12 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 987)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 13:56:50 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"sil", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"sil", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (10.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "sil"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 15.1ms | Allocations: 4035)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:9:in `login'
+Started POST "/auth/login" for ::1 at 2020-06-12 13:57:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 251ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 3520)
+
+
+Started GET "/projects" for ::1 at 2020-06-12 13:57:15 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-12 13:57:15 -0400
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.9ms | Allocations: 1623)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 1027)
+
+
