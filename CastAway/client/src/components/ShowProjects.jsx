@@ -8,11 +8,11 @@ export default function ShowProjects(props) {
     <>
       <h2>Projects</h2>
       <Link to='/new/project'><button>Create a Project</button></Link>
-      <Link><button>Create a Pattern</button></Link>
+      {/* <Link><button>Create a Pattern</button></Link> */}
       {
         projects.map(project => (
           <React.Fragment key={project.id}>
-            <Link to={`/projects/${project.id}`}>{project.image_url}</Link>
+            <Link to={`/projects/${project.id}`}>{project.title}</Link>
             {
               currentAdmin && currentAdmin.id === project.admin_id && (
                 <>

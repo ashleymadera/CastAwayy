@@ -16,6 +16,7 @@ export default class Main extends Component {
 
   componentDidMount() {
     this.getProjects()
+
   }
 
   // ============================
@@ -25,6 +26,7 @@ export default class Main extends Component {
   getProjects = async () => {
     const projects = await getAllProjects()
     this.setState({ projects })
+    console.log(projects)
   }
 
   render() {
@@ -44,12 +46,16 @@ export default class Main extends Component {
           />
         )} />
         <Route path='/projects'
-          render={() => (
+          render={() =>
             (<ShowProjects
               projects={this.state.projects}
             />)
-          )}
+          }
         >
+        </Route>
+
+        <Route>
+
         </Route>
 
       </main>

@@ -38,6 +38,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+
         <Header
           currentAdmin={this.state.currentAdmin}
           handleLogout={this.handleLogout}
