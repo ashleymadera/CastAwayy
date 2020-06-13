@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function ShowProjects(props) {
 
-  const { projects, currentAdmin, deleteProject, history } = props
+  const { projects, currentAdmin, destroyProject, history } = props
   return (
     <>
-      <h2>Projects</h2>
+      <h2>PROJECTS</h2>
       <Link to='/new/project'><button>Create a Project</button></Link>
       {/* <Link><button>Create a Pattern</button></Link> */}
       {
@@ -16,8 +16,8 @@ export default function ShowProjects(props) {
             {
               currentAdmin && currentAdmin.id === project.admin_id && (
                 <>
-                  <button onClick={() => history.push(`/project/${project.id}/edit`)}>edit</button>
-                  <button onClick={() => deleteProject(project.id)}>delete</button>
+                  <button onClick={() => history.push(`/project/${project.id}/edit`)}>EDIT</button>
+                  <button onClick={() => destroyProject(project.id)}>DELETE</button>
                 </>
               )
             }

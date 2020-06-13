@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { getAllPatterns } from "../services/patterns"
 
 export default class CreateProject extends Component {
 
   state = {
-    patterns: [],
+
     title: '',
     garmentType: '',
+    patterns: [],
     instruction: '',
     imageURL: ''
 
@@ -22,11 +24,13 @@ export default class CreateProject extends Component {
       title: value,
       garmentType: value,
       instruction: value,
-      imageUrl: value
+      imageURL: value
     })
   }
 
   render() {
+    const { title, garmentType, instruction, imageURL, patterns } = this.state
+    const { postProject, history } = this.props
     return (
       <form onSubmit={(e) => {
         e.preventDefault()
@@ -68,6 +72,30 @@ export default class CreateProject extends Component {
             onChange={this.handleChange}
           />
         </label>
+        <br />
+
+        {/* Reserve for Drop down */}
+        <label htmlFor="patterns">PATTERN:
+        <input
+            id="id"
+            type="text"
+            value={patterns}
+            onChange={this.handleChange}
+          />
+        </label>
+
+
+        <br />
+        <label htmlFor="imageURL">IMAGE:
+        <input
+            id="id"
+            type="text"
+            value={imageURL}
+            onChange={this.handleChange}
+          />
+        </label>
+        <br />
+        <button>Create</button>
       </form>
     )
   }
