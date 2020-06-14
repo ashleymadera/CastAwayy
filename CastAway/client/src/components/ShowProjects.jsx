@@ -7,7 +7,9 @@ export default function ShowProjects(props) {
   return (
     <>
       <h2>PROJECTS</h2>
+
       <Link to='/new/project'><button>Create a Project</button></Link>
+
       {/* <Link><button>Create a Pattern</button></Link> */}
       {
         projects.map(project => (

@@ -1,47 +1,76 @@
 import React, { Component } from 'react'
-import { getAllPatterns } from "../services/patterns"
 
 export default class CreateProject extends Component {
 
   state = {
-
     title: '',
-    garmentType: '',
-    patterns: [],
+    garment_type: '',
     instruction: '',
-    imageURL: ''
-
+    image_url: '',
+    pattern: ''
   }
 
-  async componentDidMount() {
-    const patterns = await getAllPatterns();
-    this.setState({ patterns });
+  componentDidUpdate = () => {
+    if (!this.state.pattern && this.props.patterns.length) {
+      this.setState({
+        pattern: this.props.patterns[0].id
+      })
+    }
   }
 
-  handleChange = (e) => {
+  handleTitleChange = (e) => {
     const { value } = e.target
     this.setState({
-      title: value,
-      garmentType: value,
-      instruction: value,
-      imageURL: value
+      title: value
+    })
+  }
+  handleGarmentTypeChange = (e) => {
+    const { value } = e.target
+    this.setState({
+      garment_type: value
+    })
+  }
+  handleInstructionChange = (e) => {
+    const { value } = e.target
+    this.setState({
+      instruction: value
     })
   }
 
+  handlePatternsChange = (e, whichState) => {
+    const { value } = e.target
+
+    this.setState({
+      pattern: value
+    })
+  }
+
+  handleImageURLChange = (e) => {
+    const { value } = e.target
+    this.setState({ image_url: value })
+  }
+
+
+
   render() {
-    const { title, garmentType, instruction, imageURL, patterns } = this.state
-    const { postProject, history } = this.props
+    const { title, garment_type, instruction, image_url, pattern } = this.state
+    const { postProject, history, patterns } = this.props
+
+
     return (
       <form onSubmit={(e) => {
         e.preventDefault()
-        postProject(this.state)
-        history.pushState('/projects')
+        const {
+          pattern, ...projectData
+        } = this.state
+        postProject(projectData, pattern)
+        history.push('/projects')
         this.setState({
-          patterns: [],
+          pattern: '',
           title: '',
-          garmentType: '',
+          garment_type: '',
           instruction: '',
-          imageURL: ''
+          image_url: ''
         })
       }}>
         <hr />
@@ -51,16 +80,16 @@ export default class CreateProject extends Component {
             id="id"
             type="text"
             value={title}
-            onChange={this.handleChange}
+            onChange={this.handleTitleChange}
           />
         </label>
         <br />
-        <label htmlFor="garmentType">GARMENT TYPE:
+        <label htmlFor="garment_type">GARMENT TYPE:
         <input
             id="id"
             type="text"
-            value={garmentType}
-            onChange={this.handleChange}
+            value={garment_type}
+            onChange={this.handleGarmentTypeChange}
           />
         </label>
         <br />
@@ -69,29 +98,27 @@ export default class CreateProject extends Component {
             id="id"
             type="text"
             value={instruction}
-            onChange={this.handleChange}
+            onChange={this.handleInstructionChange}
           />
         </label>
         <br />
 
         {/* Reserve for Drop down */}
-        <label htmlFor="patterns">PATTERN:
-        <input
-            id="id"
-            type="text"
-            value={patterns}
-            onChange={this.handleChange}
-          />
+        <label htmlFor="pattern">PATTERN:
+         <select name="pattern" onChange={this.handlePatternsChange}>
+            {
+              patterns.map((result) =>
+                <option value={result.id} display={result.name}>{result.name}</option>)
+            }
+          </select>
         </label>
-
-
         <br />
-        <label htmlFor="imageURL">IMAGE:
+        <label htmlFor="image_url">IMAGE:
         <input
             id="id"
             type="text"
-            value={imageURL}
-            onChange={this.handleChange}
+            value={image_url}
+            onChange={this.handleImageURLChange}
           />
         </label>
         <br />

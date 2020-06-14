@@ -14,8 +14,8 @@ export const getAProject = async (id) => {
 
 //Create
 
-export const createProject = async (projectData) => {
-  const resp = await api.post('/projects', { project: projectData })
+export const createProject = async (projectData, patternId) => {
+  const resp = await api.post(`/patterns/${patternId}/projects`, { project: projectData })
   return resp.data
 }
 

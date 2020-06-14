@@ -4,6 +4,7 @@ import Login from './Login';
 import Register from './Register';
 import { getAllProjects, createProject, deleteProject } from '../services/projects';
 import { getAllPatterns } from "../services/patterns"
+import { getAllAdmins } from "../services/admins"
 import ShowProjects from "./ShowProjects"
 import CreateProject from "./CreateProject"
 
@@ -13,14 +14,29 @@ export default class Main extends Component {
 
   state = {
     projects: [],
-    patterns: []
+    patterns: [],
+    admins: []
   }
 
   componentDidMount() {
     this.getProjects()
     this.getPatterns()
+    this.getAdmins()
   }
 
+
+  // ============================
+  // ========== admin =========
+  // ============================
+
+  getAdmins = async () => {
+    const admins = await getAllAdmins()
+    this.setState({ admins })
+  }
+
+  // ============================
+  // ========= patterns =========
+  // ============================
 
 
   getPatterns = async () => {
@@ -28,7 +44,7 @@ export default class Main extends Component {
     this.setState({ patterns })
   }
   // ============================
-  // ========== projects=========
+  // ========= projects =========
   // ============================
 
   getProjects = async () => {
@@ -37,8 +53,8 @@ export default class Main extends Component {
     console.log(projects)
   }
 
-  postProjects = async (projectData) => {
-    const newProjects = await createProject(projectData)
+  postProjects = async (projectData, patternId) => {
+    const newProjects = await createProject(projectData, patternId)
     this.setState(prevState => ({
       projects: [...prevState.projects, newProjects]
     }))
@@ -61,7 +77,7 @@ export default class Main extends Component {
   render() {
     return (
       <main>
-        hello
+        <Route path='/'></Route>
         <Route path='/admin/login' render={(props) => (
           <Login
             {...props}
@@ -77,6 +93,7 @@ export default class Main extends Component {
         <Route path='/projects'
           render={() =>
             (<ShowProjects
+              admins={this.state.admins}
               projects={this.state.projects}
               destroyProject={this.props.destroyProject}
             />)
@@ -87,6 +104,7 @@ export default class Main extends Component {
           <CreateProject
             {...props}
             postProject={this.postProjects}
+            patterns={this.state.patterns}
           />
         )}>
         </Route>
