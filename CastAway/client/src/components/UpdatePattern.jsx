@@ -10,20 +10,14 @@ export default class UpdatePattern extends Component {
     gauge: ""
   }
 
-  componentDidMount() {
-    if (this.props.pattern) {
-      this.SetPattern()
-    }
-  }
-
   componentDidUpdate(prevProps) {
     if (prevProps.pattern !== this.props.pattern) {
       this.setPattern()
     }
   }
 
-  setProject = () => {
-    const { name, difficulty, yarn, needle_size, gauge } = this.props.project
+  setPattern = () => {
+    const { name, difficulty, yarn, needle_size, gauge } = this.props.pattern
     this.setState({ name, difficulty, yarn, needle_size, gauge })
   }
 
@@ -34,28 +28,49 @@ export default class UpdatePattern extends Component {
   //     })
   //   }
   // }
-  handleChange = (e) => {
-    const { value } = e.target
+  handleNameChange = (e) => {
+    const { value } = e.target;
     this.setState({
-      name: value,
-      difficulty: value,
-      yarn: value,
-      needle_size: value,
+      name: value
+    })
+  }
+  handleDifficultyChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      difficulty: value
+    })
+  }
+  handleYarnChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      yarn: value
+    })
+  }
+  handleNeedleSizeChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      needle_size: value
+    })
+  }
+  handleGaugeChange = (e) => {
+    const { value } = e.target;
+    this.setState({
       gauge: value
     })
   }
 
   render() {
     const { name, difficulty, yarn, needle_size, gauge, pattern } = this.state
-    const { putPattern, history, patterns } = this.props
+    const { putPattern, history } = this.props
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
-        // const {
-        //   pattern,  ...project.id 
-        // } = this.state
-        putPattern(pattern.id, this.state);
-        history.push('/patterns');
+        const {
+          pattern, ...patternData
+        } = this.state
+
+        putPattern(this.props.pattern.id, patternData);
+        history.push('/pattern');
         this.setState({
           name: "",
           difficulty: "",
@@ -73,7 +88,7 @@ export default class UpdatePattern extends Component {
               id="id"
               type="text"
               value={name}
-              onChange={this.handleChange}
+              onChange={this.handleNameChange}
             />
           </label>
           <br />
@@ -82,7 +97,7 @@ export default class UpdatePattern extends Component {
               id="id"
               type="text"
               value={difficulty}
-              onChange={this.handleChange}
+              onChange={this.handleDifficultyChange}
             />
           </label>
           <br />
@@ -91,7 +106,7 @@ export default class UpdatePattern extends Component {
               id="id"
               type="text"
               value={yarn}
-              onChange={this.handleChange}
+              onChange={this.handleYarnChange}
             />
           </label>
           <br />
@@ -100,7 +115,7 @@ export default class UpdatePattern extends Component {
               id="id"
               type="text"
               value={needle_size}
-              onChange={this.handleChange}
+              onChange={this.handleNeedleSizeChange}
             />
           </label>
           <br />
@@ -109,7 +124,7 @@ export default class UpdatePattern extends Component {
               id="id"
               type="text"
               value={gauge}
-              onChange={this.handleChange}
+              onChange={this.handleGaugeChange}
             />
           </label>
           <br />

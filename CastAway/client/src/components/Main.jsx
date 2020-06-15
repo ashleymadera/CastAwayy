@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import { getAllProjects, createProject, deleteProject, updateProject, getAProject } from '../services/projects';
-import { getAllPatterns, createPattern } from "../services/patterns"
+import { getAllPatterns, createPattern, updatePattern } from "../services/patterns"
 import { getAllAdmins } from "../services/admins"
 import Project from "./Project"
 import ShowProjects from "./ShowProjects"
@@ -58,9 +58,9 @@ export default class Main extends Component {
     }))
   }
   putPattern = async (id, patternData) => {
-    const updatePattern = await updatePattern(id, patternData);
+    const updatedPattern = await updatePattern(id, patternData);
     this.setState(prevState => ({
-      patterns: prevState.patterns.map(pattern => pattern.id === id ? updatePattern : pattern)
+      patterns: prevState.patterns.map(pattern => pattern.id === id ? updatedPattern : pattern)
     }))
   }
 
@@ -95,9 +95,9 @@ export default class Main extends Component {
   }
 
   putProject = async (id, projectData) => {
-    const updateProject = await updateProject(id, projectData);
+    const editProject = await updateProject(id, projectData);
     this.setState(prevState => ({
-      projects: prevState.projects.map(project => project.id === id ? updateProject : project)
+      projects: prevState.projects.map(project => project.id === id ? editProject : project)
     }))
   }
 

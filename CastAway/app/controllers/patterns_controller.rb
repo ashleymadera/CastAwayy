@@ -4,8 +4,7 @@ class PatternsController < ApplicationController
   
   
     before_action :authorize_request, only: [:create, :update, :destroy]
-    before_action :set_user, only: %i[show update destroy]
-    
+    before_action :set_pattern, only: [:show, :update, :destroy]
       # GET /patterns
       def index
         @patterns = Pattern.all
@@ -14,7 +13,6 @@ class PatternsController < ApplicationController
     
       # GET /patterns/1
       def show
-        @pattern = Pattern.find(params[:id])
         render json: @pattern, include: :projects
       end
     
@@ -50,7 +48,7 @@ class PatternsController < ApplicationController
     
       # Use callbacks to share common setup or constraints between actions.
       def set_pattern
-        @pattern = current_admin.patterns.find(params[:id])
+        @pattern = @current_admin.patterns.find(params[:id])
       end
     
       # Only allow a trusted parameter "white list" through.

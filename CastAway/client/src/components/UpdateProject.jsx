@@ -23,8 +23,8 @@ export default class UpdateProject extends Component {
   }
 
   setProject = () => {
-    const { title, garment_type, instruction, image_url, patterns } = this.props.project
-    this.setState({ title, garment_type, instruction, image_url, patterns })
+    const { title, garment_type, instruction, image_url, pattern } = this.props.project
+    this.setState({ title, garment_type, instruction, image_url, pattern })
   }
 
   componentDidUpdate = () => {
@@ -34,15 +34,36 @@ export default class UpdateProject extends Component {
       })
     }
   }
-  handleChange = (e) => {
+  handleTitleChange = (e) => {
     const { value } = e.target
     this.setState({
-      title: value,
-      garment_type: value,
-      instruction: value,
-      image_url: value,
+      title: value
+    })
+  }
+  handleGarmentTypeChange = (e) => {
+    const { value } = e.target
+    this.setState({
+      garment_type: value
+    })
+  }
+  handleInstructionChange = (e) => {
+    const { value } = e.target
+    this.setState({
+      instruction: value
+    })
+  }
+
+  handlePatternsChange = (e) => {
+    const { value } = e.target
+
+    this.setState({
       pattern: value
     })
+  }
+
+  handleImageURLChange = (e) => {
+    const { value } = e.target
+    this.setState({ image_url: value })
   }
 
   render() {
@@ -51,11 +72,8 @@ export default class UpdateProject extends Component {
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
-        // const {
-        //   pattern,  ...project.id 
-        // } = this.state
-        putProject(project.id, pattern, this.state);
-        history.push('/projects');
+        putProject(pattern, project.id, this.state);
+        history.push('/project');
         this.setState({
           title: "",
           garment_type: "",
@@ -64,14 +82,14 @@ export default class UpdateProject extends Component {
           pattern: ""
         })
       }}>
-        />
+
         <h2>EDIT PROJECT</h2>
         <label htmlFor="title">TITLE:
         <input
             id="id"
             type="text"
             value={title}
-            onChange={this.handleChange}
+            onChange={this.handleTitleChange}
           />
         </label>
         <br />
@@ -80,7 +98,7 @@ export default class UpdateProject extends Component {
             id="id"
             type="text"
             value={garment_type}
-            onChange={this.handleChange}
+            onChange={this.handleGarmentTypeChange}
           />
         </label>
         <br />
@@ -89,14 +107,14 @@ export default class UpdateProject extends Component {
             id="id"
             type="text"
             value={instruction}
-            onChange={this.handleChange}
+            onChange={this.handleInstructionChange}
           />
         </label>
         <br />
 
         {/* Reserve for Drop down */}
         <label htmlFor="pattern">PATTERN:
-         <select name="pattern" onChange={this.handleChange}>
+         <select name="pattern" onChange={this.handlePatternsChange}>
             {
               patterns.map((result) =>
                 <option value={result.id} display={result.name}>{result.name}</option>)
@@ -109,7 +127,7 @@ export default class UpdateProject extends Component {
             id="id"
             type="text"
             value={image_url}
-            onChange={this.handleChange}
+            onChange={this.handleImageURLChange}
           />
         </label>
         <br />
