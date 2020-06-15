@@ -21,7 +21,7 @@ export const createProject = async (projectData, patternId) => {
 
 //Edit/Update
 
-export const UpdateProject = async (id, projectData) => {
+export const updateProject = async (id, projectData) => {
   const resp = await api.put(`/projects/${id}`, { projects: projectData })
   return resp.data
 }
