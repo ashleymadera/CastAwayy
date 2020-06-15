@@ -27,7 +27,7 @@ export default class CreatePattern extends Component {
 
     return (
       <>
-        <h2>CREATE A PATTERN</h2>
+        <h2 className='project-form'>CREATE A PATTERN</h2>
         <form classname="form" onSubmit={(e) => {
           e.preventDefault();
           postPattern(this.state);
@@ -41,53 +41,55 @@ export default class CreatePattern extends Component {
           })
         }}>
 
-          <h2>CREATE A PATTERN</h2>
-          <label htmlFor="name">NAME:
+          <div className='form-content'>
+
+            <label htmlFor="name">NAME:
         <input
-              id="id"
-              type="text"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label htmlFor="difficulty">DIFFICULTY:
+                id="id"
+                type="text"
+                value={name}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="difficulty">DIFFICULTY:
         <input
-              id="id"
-              type="text"
-              value={difficulty}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label htmlFor="yarn">YARN:
+                id="id"
+                type="text"
+                value={difficulty}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="yarn">YARN:
         <input
-              id="id"
-              type="text"
-              value={yarn}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label htmlFor="needle_size">NEEDLE_SIZE:
+                id="id"
+                type="text"
+                value={yarn}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="needle_size">NEEDLE_SIZE:
         <input
-              id="id"
-              type="text"
-              value={needle_size}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label htmlFor="gauge">GAUGE:
+                id="id"
+                type="text"
+                value={needle_size}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="gauge">GAUGE:
         <input
-              id="id"
-              type="text"
-              value={gauge}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <button>Create</button>
+                id="id"
+                type="text"
+                value={gauge}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <button>Create</button>
+          </div>
         </form>
       </>
     )

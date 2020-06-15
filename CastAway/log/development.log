@@ -10963,3 +10963,367 @@ Processing by PatternsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1110)
 
 
+Started GET "/patterns" for ::1 at 2020-06-14 23:30:04 -0400
+Started GET "/projects" for ::1 at 2020-06-14 23:30:04 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:30:04 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (5.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mPattern Load (2.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 5.6ms | Allocations: 2292)
+
+
+  [1m[36mProject Load (13.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 12.1ms | ActiveRecord: 13.0ms | Allocations: 3125)
+
+
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 2.0ms | Allocations: 3449)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:30:04 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.5ms | Allocations: 1180)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:31:35 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:31:35 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:31:35 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (6.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 6.9ms | Allocations: 3123)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:31:35 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mPattern Load (19.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 24ms (Views: 3.2ms | ActiveRecord: 19.8ms | Allocations: 4715)
+
+
+  [1m[36mProject Load (9.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mAdmin Load (31.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 18ms (Views: 7.5ms | ActiveRecord: 9.9ms | Allocations: 2437)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 38ms (Views: 6.5ms | ActiveRecord: 31.2ms | Allocations: 6081)
+
+
+Started GET "/patterns" for ::1 at 2020-06-14 23:32:28 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (4.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 4.9ms | Allocations: 1110)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:32:53 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:32:53 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (2.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.4ms | Allocations: 2173)
+
+
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.1ms | Allocations: 2213)
+
+
+Started GET "/admins" for ::1 at 2020-06-14 23:32:53 -0400
+Started GET "/projects" for ::1 at 2020-06-14 23:32:53 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 3.1ms | Allocations: 2564)
+
+
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 2.2ms | Allocations: 2044)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:33:03 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:33:03 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:33:03 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (10.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 13ms (Views: 2.5ms | ActiveRecord: 10.3ms | Allocations: 1180)
+
+
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+Started GET "/projects" for ::1 at 2020-06-14 23:33:03 -0400
+  [1m[36mPattern Load (0.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.9ms | Allocations: 2638)
+
+
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 2.3ms | Allocations: 3241)
+
+
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1180)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:33:51 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:33:51 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:33:51 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (24.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (25.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 27ms (Views: 2.2ms | ActiveRecord: 24.4ms | Allocations: 2292)
+
+
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 28ms (Views: 2.5ms | ActiveRecord: 25.0ms | Allocations: 3397)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:33:51 -0400
+  [1m[36mAdmin Load (47.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 49ms (Views: 1.7ms | ActiveRecord: 47.5ms | Allocations: 3845)
+
+
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1180)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:34:38 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:34:38 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:34:38 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (25.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mProject Load (26.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 29ms (Views: 3.0ms | ActiveRecord: 25.4ms | Allocations: 2053)
+
+
+  [1m[36mPattern Load (2.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 31ms (Views: 4.4ms | ActiveRecord: 26.6ms | Allocations: 3888)
+
+
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 2.0ms | Allocations: 3266)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:34:39 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1180)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:37:20 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:37:20 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:37:20 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 1110)
+
+
+  [1m[36mProject Load (10.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 10.2ms | Allocations: 3426)
+
+
+Processing by AdminsController#index as HTML
+Started GET "/projects" for ::1 at 2020-06-14 23:37:20 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (3.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 3.7ms | Allocations: 2336)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 2239)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:03 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/patterns" for ::1 at 2020-06-14 23:38:03 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:38:03 -0400
+  [1m[36mProject Load (20.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 23ms (Views: 2.5ms | ActiveRecord: 20.3ms | Allocations: 1884)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:03 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (8.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 8.3ms | Allocations: 1180)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 1110)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 3.1ms | Allocations: 935)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:40 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:38:40 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mPattern Load (4.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 4.5ms | Allocations: 2077)
+
+
+  [1m[36mProject Load (5.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 5.2ms | Allocations: 2431)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:40 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:38:40 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1842)
+
+
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 2163)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:51 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/patterns" for ::1 at 2020-06-14 23:38:51 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:38:51 -0400
+  [1m[36mProject Load (12.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 15ms (Views: 2.0ms | ActiveRecord: 12.3ms | Allocations: 1870)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:38:51 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mPattern Load (5.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 5.9ms | Allocations: 2095)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (7.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 7.0ms | Allocations: 3401)
+
+
+  [1m[36mAdmin Load (5.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 5.9ms | Allocations: 2232)
+
+
+Started GET "/patterns" for ::1 at 2020-06-14 23:39:36 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.9ms | Allocations: 1110)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:40:23 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:40:23 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:40:23 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by AdminsController#index as HTML
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (4.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+  [1m[36mAdmin Load (3.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.1ms | Allocations: 2293)
+
+
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 4.9ms | Allocations: 3203)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 3.7ms | Allocations: 2967)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:40:24 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:40:46 -0400
+Started GET "/patterns" for ::1 at 2020-06-14 23:40:46 -0400
+Started GET "/admins" for ::1 at 2020-06-14 23:40:46 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1110)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (18.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 21ms (Views: 2.7ms | ActiveRecord: 18.4ms | Allocations: 4374)
+
+
+Started GET "/projects" for ::1 at 2020-06-14 23:40:46 -0400
+  [1m[36mAdmin Load (39.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 42ms (Views: 1.6ms | ActiveRecord: 39.9ms | Allocations: 2594)
+
+
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (19.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 22ms (Views: 2.2ms | ActiveRecord: 19.5ms | Allocations: 1238)
+
+
+Started GET "/patterns" for ::1 at 2020-06-14 23:40:56 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (4.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 4.2ms | Allocations: 1110)
+
+
+Started GET "/patterns" for ::1 at 2020-06-14 23:41:04 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1110)
+
+
