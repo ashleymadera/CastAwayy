@@ -10,6 +10,8 @@ import ShowProjects from "./ShowProjects"
 import CreateProject from "./CreateProject"
 import UpdateProject from "./UpdateProject"
 import CreatePattern from './CreatePattern';
+import UpdatePattern from './UpdatePattern';
+import ShowPatterns from './ShowPatterns'
 
 
 
@@ -19,14 +21,14 @@ export default class Main extends Component {
     projects: [],
     patterns: [],
     admins: [],
-    // project: {}
+    project: {}
   }
 
   componentDidMount() {
     this.getProjects()
     this.getPatterns()
     this.getAdmins()
-    this.getProjects()
+    this.getAProject()
   }
 
 
@@ -48,6 +50,27 @@ export default class Main extends Component {
     const patterns = await getAllPatterns()
     this.setState({ patterns })
   }
+
+  postPatterns = async (patternData) => {
+    const newPatterns = await createPattern(patternData)
+    this.setState(prevState => ({
+      patterns: [...prevState.patterns, newPatterns]
+    }))
+  }
+  putPattern = async (id, patternData) => {
+    const updatePattern = await updatePattern(id, patternData);
+    this.setState(prevState => ({
+      patterns: prevState.patterns.map(pattern => pattern.id === id ? updatePattern : pattern)
+    }))
+  }
+
+  // destroyPattern = async (id) => {
+  //   await deletePattern(id)
+  //   this.setState(prevState => ({
+  //     pattern: prevState.patterns.filter(pattern => pattern.id !== id)
+  //   }))
+  // }
+
   // ============================
   // ========= projects =========
   // ============================
@@ -124,8 +147,12 @@ export default class Main extends Component {
              // ====== ProjectDetails ======
              // ============================ */}
 
-        <Route exact path='/Project/:project.id' component={Project} >
-          <Project project={this.state.projects} />
+        <Route exact path='/Projects/:id' render={(props) => (
+          <Project
+            {...props}
+            project={this.state.project} />
+        )} >
+
         </Route>
 
         {/*  // ============================
@@ -163,9 +190,25 @@ export default class Main extends Component {
         <Route exact path='/new/pattern' render={(props) => (
           <CreatePattern
             {...props}
-            postPattern={this.postPattern}
+            postPattern={this.postPatterns}
+          // patterns={this.state.patterns}
           />
         )}>
+        </Route>
+
+        {/*  // ============================
+             // ==== Edit/Update Pattern ===
+             // ============================ */}
+
+        <Route exact path='/pattern/:id/edit' render={(props) => {
+          const patternId = props.match.params.id
+          const pattern = this.state.patterns.find(pattern => pattern.id === parseInt(patternId))
+          return <UpdatePattern
+            {...props}
+            pattern={pattern}
+            // patterns={this.state.patterns}
+            putPattern={this.putPattern} />
+        }}>
         </Route>
 
       </main>

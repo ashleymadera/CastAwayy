@@ -39,7 +39,7 @@ export default class CreateProject extends Component {
     })
   }
 
-  handlePatternsChange = (e, whichState) => {
+  handlePatternsChange = (e) => {
     const { value } = e.target
 
     this.setState({

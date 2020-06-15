@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function ShowPatterns(props) {
 
-  // const { patterns, currentAdmin, deletePattern, history } = props
+  const { patterns, currentAdmin, destroyPattern, history } = props
   return (
     <>
-      />
+
       <h2>Pattern</h2>
       {props.results.map((result, id) =>
         <div>

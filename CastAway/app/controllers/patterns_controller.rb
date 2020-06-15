@@ -15,7 +15,7 @@ class PatternsController < ApplicationController
       # GET /patterns/1
       def show
         @pattern = Pattern.find(params[:id])
-        render json: @pattern, include: :patterns
+        render json: @pattern, include: :projects
       end
     
       # POST /fpatterns
@@ -55,7 +55,7 @@ class PatternsController < ApplicationController
     
       # Only allow a trusted parameter "white list" through.
       def pattern_params
-        params.require(:pattern).permit(:name)
+        params.require(:pattern).permit(:name, :difficulty, :yarn, :needle_size, :gauge)
       end
     end
     

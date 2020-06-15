@@ -28,19 +28,18 @@ export default function ShowProjects(props) {
           <Link to='/new/pattern'><button>CREATE A PATTERN</button></Link>
         </>
       </div>
-
       <br />
       <div className='project-list'>
         {
-          projects.map((project, index) => (
+          projects.map((project) => (
             <React.Fragment key={project.id}>
               <div >
-                {/* <Link to={`/Projects/${project.id}`}>{project.title} */}
-                <br />
-                <img src={project.image_url}
-                  alt="image"
-                  height='60px' />
-                {/* </xsLink> */}
+                <Link to={`/Projects/${project.id}`}>{project.title}
+                  <br />
+                  <img src={project.image_url}
+                    alt="image"
+                    height='60px' />
+                </Link>
               </div>
               <br />
             </React.Fragment>

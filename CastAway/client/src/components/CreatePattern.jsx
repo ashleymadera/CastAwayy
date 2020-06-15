@@ -10,13 +10,33 @@ export default class CreatePattern extends Component {
     gauge: ""
   }
 
-  handleChange = (e) => {
+  handleNameChange = (e) => {
     const { value } = e.target;
     this.setState({
-      name: value,
-      difficulty: value,
-      yarn: value,
-      needle_size: value,
+      name: value
+    })
+  }
+  handleDifficultyChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      difficulty: value
+    })
+  }
+  handleYarnChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      yarn: value
+    })
+  }
+  handleNeedleSizeChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      needle_size: value
+    })
+  }
+  handleGaugeChange = (e) => {
+    const { value } = e.target;
+    this.setState({
       gauge: value
     })
   }
@@ -30,7 +50,10 @@ export default class CreatePattern extends Component {
         <h2 className='project-form'>CREATE A PATTERN</h2>
         <form classname="form" onSubmit={(e) => {
           e.preventDefault();
-          postPattern(this.state);
+          const {
+            ...patternData
+          } = this.state
+          postPattern(patternData);
           history.push('/patterns');
           this.setState({
             name: "",
@@ -48,7 +71,7 @@ export default class CreatePattern extends Component {
                 id="id"
                 type="text"
                 value={name}
-                onChange={this.handleChange}
+                onChange={this.handleNameChange}
               />
             </label>
             <br />
@@ -57,7 +80,7 @@ export default class CreatePattern extends Component {
                 id="id"
                 type="text"
                 value={difficulty}
-                onChange={this.handleChange}
+                onChange={this.handleDifficultyChange}
               />
             </label>
             <br />
@@ -66,7 +89,7 @@ export default class CreatePattern extends Component {
                 id="id"
                 type="text"
                 value={yarn}
-                onChange={this.handleChange}
+                onChange={this.handleYarnChange}
               />
             </label>
             <br />
@@ -75,7 +98,7 @@ export default class CreatePattern extends Component {
                 id="id"
                 type="text"
                 value={needle_size}
-                onChange={this.handleChange}
+                onChange={this.handleNeedleSizeChange}
               />
             </label>
             <br />
@@ -84,7 +107,7 @@ export default class CreatePattern extends Component {
                 id="id"
                 type="text"
                 value={gauge}
-                onChange={this.handleChange}
+                onChange={this.handleGaugeChange}
               />
             </label>
             <br />
