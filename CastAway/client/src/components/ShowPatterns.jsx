@@ -6,15 +6,16 @@ export default function ShowPatterns(props) {
   const { patterns, currentAdmin, destroyPattern, history } = props
   return (
     <>
-
-      <h2>Pattern</h2>
-      {props.results.map((result, id) =>
-        <div>
-          <Link to={`/pattern/${result.id}`}>
-            <h3>{result.name}</h3>
-          </Link>
-        </div>
-      )}
+      <div className='patterns'>
+        <h2>PATTERNS</h2>
+        {props.results.map((result, id) =>
+          <div>
+            <Link to={`/pattern/${result.id}`}>
+              <h3>{result.name}</h3>
+            </Link>
+          </div>
+        )}
+      </div>
     </>
   )
 }

@@ -35,7 +35,8 @@ export default class Register extends Component {
           <div className='form-content'>
             <h2>BECOME A MEMBER</h2>
             <label htmlFor="username">username:
-          <input
+            <br />
+              <input
                 id="username"
                 type="text"
                 name="username"
@@ -43,9 +44,9 @@ export default class Register extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            <br />
             <label htmlFor="email">email:
-          <input
+            <br />
+              <input
                 id="email"
                 type="text"
                 name="email"
@@ -53,9 +54,9 @@ export default class Register extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            <br />
             <label htmlFor="password">password:
-          <input
+            <br />
+              <input
                 id="password"
                 type="password"
                 name="password"
@@ -63,8 +64,7 @@ export default class Register extends Component {
                 onChange={this.handleChange}
               />
             </label>
-            <br />
-            <button>Submit</button>
+            <br />            <button>Submit</button>
           </div>
         </form>
       </>

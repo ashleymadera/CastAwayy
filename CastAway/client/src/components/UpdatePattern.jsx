@@ -86,7 +86,7 @@ export default class UpdatePattern extends Component {
         })
       }}>
 
-        <h2>EDIT PROJECT</h2>
+        <h2 className='project-form' >EDIT PROJECT</h2>
         <div className='form-content'>
 
           <label htmlFor="name">NAME:

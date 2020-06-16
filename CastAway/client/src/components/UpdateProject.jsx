@@ -86,55 +86,59 @@ export default class UpdateProject extends Component {
         })
       }}>
 
-        <h2>EDIT PROJECT</h2>
-        <label htmlFor="title">TITLE:
-        <input
-            id="id"
-            type="text"
-            value={title}
-            onChange={this.handleTitleChange}
-          />
-        </label>
-        <br />
-        <label htmlFor="garment_type">GARMENT TYPE:
-        <input
-            id="id"
-            type="text"
-            value={garment_type}
-            onChange={this.handleGarmentTypeChange}
-          />
-        </label>
-        <br />
-        <label htmlFor="instruction">INSTRUCTIONS:
-        <input
-            id="id"
-            type="text"
-            value={instruction}
-            onChange={this.handleInstructionChange}
-          />
-        </label>
-        <br />
+        <h2 className='project-form'>EDIT PROJECT</h2>
+        <div className='form-content'>
+          <label htmlFor="title">TITLE:
+          <br />
+            <input
+              id="id"
+              type="text"
+              value={title}
+              onChange={this.handleTitleChange}
+            />
+          </label>
+          <label htmlFor="garment_type">GARMENT TYPE:
+          <br />
+            <input
+              id="id"
+              type="text"
+              value={garment_type}
+              onChange={this.handleGarmentTypeChange}
+            />
+          </label>
+          <label htmlFor="instruction">INSTRUCTIONS:
+          <br />
+            <input
+              id="id"
+              type="text"
+              value={instruction}
+              onChange={this.handleInstructionChange}
+            />
+          </label>
 
-        {/* Reserve for Drop down */}
-        <label htmlFor="pattern">PATTERN:
-         <select name="pattern" onChange={this.handlePatternsChange}>
-            {
-              patterns.map((result) =>
-                <option value={result.id} display={result.name}>{result.name}</option>)
-            }
-          </select>
-        </label>
-        <br />
-        <label htmlFor="image_url">IMAGE:
-        <input
-            id="id"
-            type="text"
-            value={image_url}
-            onChange={this.handleImageURLChange}
-          />
-        </label>
-        <br />
-        <button>Update</button>
+          {/* Reserve for Drop down */}
+          <label htmlFor="pattern">PATTERN:
+          <br />
+            <select name="pattern" onChange={this.handlePatternsChange}>
+              {
+                patterns.map((result) =>
+                  <option value={result.id} display={result.name}>{result.name}</option>)
+              }
+            </select>
+          </label>
+
+          <label htmlFor="image_url">IMAGE:
+          <br />
+            <input
+              id="id"
+              type="text"
+              value={image_url}
+              onChange={this.handleImageURLChange}
+            />
+          </label>
+          <br />
+          <button>Update</button>
+        </div>
       </form>
     )
   }
