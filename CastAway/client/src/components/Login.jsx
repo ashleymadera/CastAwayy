@@ -18,39 +18,48 @@ export default class Login extends Component {
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleLoginSubmit(this.state);
-        history.push('/');
-        this.setState({
-          username: "",
-          password: ""
-        })
-      }}>
-        <h3>Login</h3>
-        <label htmlFor="username">username:
-          <input
-            id="username"
-            type="text"
-            name="username"
-            value={username}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <label htmlFor="password">password:
-          <input
-            id="password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <Link to='/admin/register'>Register</Link>
-        <button>Submit</button>
-      </form>
+      <>
+        <h3 className='project-form'>Login</h3>
+
+        <div className='form-content'>
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            handleLoginSubmit(this.state);
+            history.push('/');
+            this.setState({
+              username: "",
+              password: ""
+            })
+          }}>
+            <h2>WELCOME BACK!</h2>
+            <label htmlFor="username">username:
+            <br />
+              <input
+                id="username"
+                type="text"
+                name="username"
+                value={username}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <label htmlFor="password">password:
+            <br />
+              <input
+                id="password"
+                type="password"
+                name="password"
+                value={password}
+                onChange={this.handleChange}
+              />
+            </label>
+            <br />
+            <button>Submit</button>
+            <br />
+            <Link to='/admin/register'>Not a member? Register</Link>
+          </form>
+        </div >
+      </>
     )
   }
 }
