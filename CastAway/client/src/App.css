@@ -182,3 +182,43 @@ a{
   font-family: 'Spectral', serif;
 
 }
+
+@media only screen and (max-width:700px){
+
+
+  .project-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 40px 20px;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 75px 30px 75px;
+  }
+
+  .yarnball{
+    margin: 45px 0 0 0;
+  height: 60px;
+  width: 60px;
+  }
+
+  .heart{
+    margin: 45px 75px 0 75px;
+  }
+
+}

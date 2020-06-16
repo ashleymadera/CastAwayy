@@ -6,7 +6,7 @@ export default function Header(props) {
     <div>
       <header className='header'>
         <h1 className="castaway">CASTAWAY</h1>
-        <img src="https://i.imgur.com/rEhMYM3.png" alt="Castway Yarn logo" />
+        <img className='yarnball' src="https://i.imgur.com/rEhMYM3.png" alt="Castway Yarn logo" />
         <Link to='/projects'><img src="https://i.imgur.com/MkNXAki.png" alt="Heart icon"
           className="heart"
           height="30px"

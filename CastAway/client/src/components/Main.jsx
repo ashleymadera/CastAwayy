@@ -116,12 +116,12 @@ class Main extends Component {
              // =========== auth ===========
              // ============================ */}
         <Route exact path='/'>
-          (<ShowProjects
+          <ShowProjects
             currentAdmin={this.props.currentAdmin}
             admins={this.state.admins}
             projects={this.state.projects}
             destroyProject={this.props.destroyProject}
-          />)
+          />
         </Route>
         <Route path='/admin/login' render={(props) => (
           <Login

@@ -21907,3 +21907,42 @@ Processing by PatternsController#index as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1367)
 
 
+Started GET "/patterns" for ::1 at 2020-06-16 10:16:13 -0400
+Started GET "/projects" for ::1 at 2020-06-16 10:16:13 -0400
+Started GET "/admins" for ::1 at 2020-06-16 10:16:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 10:16:13 -0400
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (53.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (51.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (53.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (159.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (134.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (155.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 212ms (Views: 18.7ms | ActiveRecord: 187.3ms | Allocations: 11776)
+
+
+Completed 200 OK in 226ms (Views: 36.5ms | ActiveRecord: 176.2ms | Allocations: 14649)
+
+
+Completed 200 OK in 278ms (Views: 40.7ms | ActiveRecord: 236.9ms | Allocations: 18751)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 10:16:14 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (11.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 21ms (Views: 7.4ms | ActiveRecord: 11.6ms | Allocations: 1367)
+
+
+  [1m[36mAdmin Load (25.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 440ms (Views: 0.3ms | ActiveRecord: 384.9ms | Allocations: 30371)
+
+
