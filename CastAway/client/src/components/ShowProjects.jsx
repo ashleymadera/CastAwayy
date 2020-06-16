@@ -34,12 +34,15 @@ export default function ShowProjects(props) {
         {
           projects.map((project) => (
             <React.Fragment key={project.id}>
-              <div >
-                <Link to={!currentAdmin ? '/' : `/projects/${project.id}`}>{project.title}
+              <div className='container'>
+                <Link to={!currentAdmin ? '/' : `/projects/${project.id}`}>
                   <br />
-                  <img src={project.image_url}
+                  <img className='showproject-image' src={project.image_url}
                     alt="image"
-                    height='60px' />
+                    height='100px' />
+                  <div className='middle'>
+                    <div className='text'>{project.title}</div>
+                  </div>
                 </Link>
               </div>
               <br />

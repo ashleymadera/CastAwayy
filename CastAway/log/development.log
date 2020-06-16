@@ -19529,3 +19529,2381 @@ DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `paren
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway_api/bin/rails:9)
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway_api/bin/rails:9)
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway-app/bin/rails:9)
+Started GET "/projects" for ::1 at 2020-06-15 22:31:26 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 22:31:26 -0400
+Started GET "/admins" for ::1 at 2020-06-15 22:31:26 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mPattern Load (2.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 2.7ms | Allocations: 8451)
+
+
+  [1m[36mProject Load (17.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 29ms (Views: 7.9ms | ActiveRecord: 17.5ms | Allocations: 16422)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 22:31:26 -0400
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 1.4ms | Allocations: 16822)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1235)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 22:32:32 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1235)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-15 22:32:44 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 278ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 1224)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 22:32:44 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (2.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.5ms | Allocations: 1235)
+
+
+Started PUT "/projects/4" for ::1 at 2020-06-15 22:32:55 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"projects"=>4, "id"=>"4", "project"=>{}}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = $1 AND "projects"."id" = $2 LIMIT $3[0m  [["admin_id", 5], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:52:in `set_project'
+Completed 404 Not Found in 12ms (ActiveRecord: 2.2ms | Allocations: 2158)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pattern without an ID):
+  
+app/controllers/projects_controller.rb:56:in `set_pattern'
+Started GET "/patterns" for ::1 at 2020-06-15 23:22:50 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 1.1ms | Allocations: 1273)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:23:42 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1235)
+
+
+Started POST "/patterns" for ::1 at 2020-06-15 23:24:31 -0400
+Processing by PatternsController#create as HTML
+  Parameters: {"pattern"=>{"name"=>"Rib", "difficulty"=>"Easy", "yarn"=>"Manos del Uruguay FRANCA (100% superwash merino wool; approx. 114 yds/150g)", "needle_size"=>"US11 / 8mm ndl, 16” circular and dpn", "gauge"=>"13 sts = 4” / 10cm over 1x1 Rib, relaxed"}}
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/patterns_controller.rb:24:in `create'
+  [1m[36mPattern Create (4.2ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rib"], ["difficulty", "Easy"], ["yarn", "Manos del Uruguay FRANCA (100% superwash merino wool; approx. 114 yds/150g)"], ["needle_size", "US11 / 8mm ndl, 16” circular and dpn"], ["gauge", "13 sts = 4” / 10cm over 1x1 Rib, relaxed"], ["admin_id", 5]]
+  ↳ app/controllers/patterns_controller.rb:24:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/patterns_controller.rb:24:in `create'
+Completed 201 Created in 40ms (Views: 3.2ms | ActiveRecord: 16.2ms | Allocations: 3504)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:24:36 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:25:55 -0400
+Started POST "/patterns/2/projects" for ::1 at 2020-06-15 23:25:55 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (5.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 5.3ms | Allocations: 1364)
+
+
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"Nina Hat", "garment_type"=>"Hat", "instruction"=>"CO 50 sts. Join, being careful not to twist, and pm to show beg of rnd. Rnds 1-4: *K1, p1; rep from * to end of rnd. Rnd 5: *P1, k1; rep from * to end of rnd. Rnd 6: *K1, p1; rep from * to end of rnd. Rnd 7: Rep Rnd 5. Rnds 8-28: *K1, p1; rep from * to end of rnd. Shape crown: Change to dpn when necessary. Rnd 1: *K1, p1, k1; s2sp; (k1, p1) twice; rep from * to end of rnd. 40 sts. Rnds 2, 4, and 6: Work sts as they appear. Rnd 3: *K1, p1; s2sp; p1, k1, p1; rep from * to end of rnd. 30 sts. Rnd 5: *K1; s2sp; k1, p1; rep from * to end of rnd. 20 sts. Rnd 7: *S2sp, p1; rep from * to end of rnd. 10 sts. Cut yarn; thread through remaining sts and pull tight. Make 3” pompom and attach at top. Weave in ends.", "image_url"=>"https://i.imgur.com/fjCnnK0.png"}, "pattern_id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 422 Unprocessable Entity in 31ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 4499)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:25:59 -0400
+Started GET "/projects" for ::1 at 2020-06-15 23:25:59 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:25:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:25:59 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (2.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 1242)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 2.1ms | Allocations: 2538)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:25:59 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (4.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 4.4ms | Allocations: 6430)
+
+
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 1120)
+
+
+  [1m[36mAdmin Load (9.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 9.0ms | Allocations: 2362)
+
+
+Started GET "/admins" for ::1 at 2020-06-15 23:26:35 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:26:35 -0400
+Started GET "/projects" for ::1 at 2020-06-15 23:26:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:26:35 -0400
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (8.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 8.8ms | Allocations: 3058)
+
+
+  [1m[36mProject Load (22.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 3.0ms | ActiveRecord: 22.8ms | Allocations: 2336)
+
+
+  [1m[36mAdmin Load (32.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mPattern Load (54.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 57ms (Views: 0.4ms | ActiveRecord: 32.3ms | Allocations: 3170)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 64ms (Views: 8.5ms | ActiveRecord: 54.6ms | Allocations: 5240)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:26:35 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 1365)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:26:42 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1090)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:32:34 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.2ms | Allocations: 1402)
+
+
+Started POST "/patterns/3/projects" for ::1 at 2020-06-15 23:33:07 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"Nina Hat", "garment_type"=>"Hat", "instruction"=>"CO 50 sts. Join, being careful not to twist, and pm to show beg of rnd. Rnds 1-4: *K1, p1; rep from * to end of rnd. Rnd 5: *P1, k1; rep from * to end of rnd. Rnd 6: *K1, p1; rep from * to end of rnd. Rnd 7: Rep Rnd 5. Rnds 8-28: *K1, p1; rep from * to end of rnd. Shape crown: Change to dpn when necessary. Rnd 1: *K1, p1, k1; s2sp; (k1, p1) twice; rep from * to end of rnd. 40 sts. Rnds 2, 4, and 6: Work sts as they appear. Rnd 3: *K1, p1; s2sp; p1, k1, p1; rep from * to end of rnd. 30 sts. Rnd 5: *K1; s2sp; k1, p1; rep from * to end of rnd. 20 sts. Rnd 7: *S2sp, p1; rep from * to end of rnd. 10 sts. Cut yarn; thread through remaining sts and pull tight. Make 3” pompom and attach at top. Weave in ends.", "image_url"=>"https://i.imgur.com/fjCnnK0.png"}, "pattern_id"=>"3"}
+  [1m[36mAdmin Load (11.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 422 Unprocessable Entity in 40ms (Views: 0.3ms | ActiveRecord: 12.6ms | Allocations: 1407)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:33:08 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1366)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:33:15 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:33:15 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:33:15 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:33:15 -0400
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 1526)
+
+
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mPattern Load (14.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 1.3ms | Allocations: 2330)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 14.4ms | Allocations: 2798)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:33:15 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (3.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 3402)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:35:50 -0400
+Started GET "/projects" for ::1 at 2020-06-15 23:35:50 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:35:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:35:50 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (3.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 3.6ms | Allocations: 1366)
+
+
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Started GET "/patterns" for ::1 at 2020-06-15 23:35:50 -0400
+  [1m[36mAdmin Load (2.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.8ms | Allocations: 1326)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (112.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPattern Load (2.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 366ms (Views: 0.2ms | ActiveRecord: 95.7ms | Allocations: 4828)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 270ms (Views: 267.4ms | ActiveRecord: 2.2ms | Allocations: 3257)
+
+
+Completed 200 OK in 380ms (Views: 264.7ms | ActiveRecord: 112.2ms | Allocations: 6670)
+
+
+Started POST "/patterns/3/projects" for ::1 at 2020-06-15 23:36:20 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"test", "garment_type"=>"test", "instruction"=>"test", "image_url"=>"tets"}, "pattern_id"=>"3"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1375)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:36:21 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (9.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 51ms (Views: 41.1ms | ActiveRecord: 9.3ms | Allocations: 1369)
+
+
+Started POST "/patterns/3/projects" for ::1 at 2020-06-15 23:37:39 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:37:39 -0400
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"name", "garment_type"=>"name", "instruction"=>"naem", "image_url"=>"name"}, "pattern_id"=>"3"}
+  [1m[36mPattern Load (11.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 50ms (Views: 23.0ms | ActiveRecord: 20.6ms | Allocations: 10452)
+
+
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 422 Unprocessable Entity in 92ms (Views: 0.1ms | ActiveRecord: 43.1ms | Allocations: 19833)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:38:01 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:38:01 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:38:01 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:38:01 -0400
+  [1m[36mProject Load (8.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 8.2ms | Allocations: 2723)
+
+
+  [1m[36mPattern Load (10.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 15ms (Views: 4.3ms | ActiveRecord: 10.5ms | Allocations: 3202)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (4.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (4.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 4.4ms | Allocations: 1065)
+
+
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 4.3ms | Allocations: 3352)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:38:01 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1366)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:38:26 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1090)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:40:40 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1091)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:40:40 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/admins" for ::1 at 2020-06-15 23:40:40 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 935)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:40:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 837)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:40:40 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (2.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 2.1ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:40:48 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:40:48 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:40:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:40:48 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mPattern Load (1.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.5ms | Allocations: 2555)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 3928)
+
+
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms | Allocations: 4142)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 4444)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:40:48 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (22.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 25ms (Views: 2.2ms | ActiveRecord: 22.7ms | Allocations: 1364)
+
+
+Started PUT "/projects/2" for ::1 at 2020-06-15 23:41:30 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"projects"=>2, "id"=>"2", "project"=>{}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = $1 AND "projects"."id" = $2 LIMIT $3[0m  [["admin_id", 5], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:52:in `set_project'
+Completed 404 Not Found in 23ms (ActiveRecord: 0.8ms | Allocations: 4186)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pattern without an ID):
+  
+app/controllers/projects_controller.rb:56:in `set_pattern'
+Started GET "/patterns" for ::1 at 2020-06-15 23:41:32 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1397)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:42:31 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:42:31 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:42:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:42:31 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Processing by ProjectsController#index as HTML
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 2218)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (24.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 27ms (Views: 1.8ms | ActiveRecord: 24.7ms | Allocations: 2035)
+
+
+  [1m[36mAdmin Load (23.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 1.9ms | ActiveRecord: 23.1ms | Allocations: 2179)
+
+
+  [1m[36mAdmin Load (40.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 77ms (Views: 0.4ms | ActiveRecord: 62.5ms | Allocations: 3305)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:43:11 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:43:11 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-15 23:43:11 -0400
+  [1m[36mPattern Load (2.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.5ms | Allocations: 1847)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:43:11 -0400
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mProject Load (10.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 10.7ms | Allocations: 5296)
+
+
+  [1m[36mAdmin Load (4.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 4.1ms | Allocations: 2331)
+
+
+  [1m[36mAdmin Load (11.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 11.5ms | Allocations: 3145)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:43:58 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:43:58 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:43:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:43:58 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1090)
+
+
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (41.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mPattern Load (11.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 44ms (Views: 1.9ms | ActiveRecord: 41.8ms | Allocations: 2965)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 15ms (Views: 3.5ms | ActiveRecord: 11.0ms | Allocations: 2474)
+
+
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 13.8ms | Allocations: 3575)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:49:06 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:49:06 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:49:06 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:49:06 -0400
+  [1m[36mPattern Load (9.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (6.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 24ms (Views: 10.9ms | ActiveRecord: 9.0ms | Allocations: 2865)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mProject Load (8.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 19ms (Views: 12.1ms | ActiveRecord: 6.7ms | Allocations: 3688)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 28ms (Views: 18.7ms | ActiveRecord: 8.2ms | Allocations: 5139)
+
+
+  [1m[36mAdmin Load (26.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 26.3ms | Allocations: 1618)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:52:17 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1090)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:52:17 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/admins" for ::1 at 2020-06-15 23:52:17 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 935)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:52:17 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 842)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:55:34 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:55:34 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:55:34 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:55:34 -0400
+  [1m[36mProject Load (3.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 3.7ms | Allocations: 1900)
+
+
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 3.1ms | Allocations: 2354)
+
+
+  [1m[36mPattern Load (7.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 7.0ms | Allocations: 2547)
+
+
+  [1m[36mAdmin Load (18.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 19.3ms | Allocations: 3690)
+
+
+Started GET "/projects" for ::1 at 2020-06-15 23:56:13 -0400
+Started GET "/patterns" for ::1 at 2020-06-15 23:56:13 -0400
+Started GET "/admins" for ::1 at 2020-06-15 23:56:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-15 23:56:13 -0400
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (0.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.3ms | Allocations: 2576)
+
+
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 2392)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 4354)
+
+
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 2.2ms | Allocations: 4662)
+
+
+Started GET "/patterns" for ::1 at 2020-06-15 23:56:50 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (20.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 22ms (Views: 1.5ms | ActiveRecord: 20.2ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:03:01 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 1.1ms | Allocations: 1402)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:03:09 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:03:35 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:03:35 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:03:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:03:35 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1090)
+
+
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mPattern Load (1.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.1ms | Allocations: 2000)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.4ms | Allocations: 2601)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 905)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:09:35 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 1402)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:14:18 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:14:18 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:14:18 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (7.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 24ms (Views: 12.9ms | ActiveRecord: 7.4ms | Allocations: 1223)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 2527)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 973)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:14:20 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:14:22 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:14:29 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:14:30 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:16:15 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:16:15 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:16:15 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Processing by AdminsController#index as HTML
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 2222)
+
+
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Processing by ProjectsController#index as HTML
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 2020)
+
+
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 2.1ms | Allocations: 1305)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:16:15 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (10.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 10.7ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:16:38 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:16:38 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:16:38 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.1ms | Allocations: 2043)
+
+
+  [1m[36mPattern Load (9.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mProject Load (11.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 9.3ms | Allocations: 3085)
+
+
+Completed 200 OK in 15ms (Views: 3.3ms | ActiveRecord: 11.2ms | Allocations: 4442)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:16:38 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-16 00:16:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 313ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 1201)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:16:57 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:17:05 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:17:05 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Started GET "/admins" for ::1 at 2020-06-16 00:17:05 -0400
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 2351)
+
+
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.6ms | Allocations: 3730)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:17:05 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1779)
+
+
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 1084)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:18:19 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:18:19 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:18:19 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:18:19 -0400
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (30.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 44ms (Views: 10.7ms | ActiveRecord: 30.6ms | Allocations: 3100)
+
+
+  [1m[36mPattern Load (13.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 13.2ms | Allocations: 2623)
+
+
+  [1m[36mAdmin Load (19.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Processing by AdminsController#index as HTML
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 31.0ms | Allocations: 7216)
+
+
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 1188)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:19:49 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (16.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 18ms (Views: 1.7ms | ActiveRecord: 16.1ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:48:35 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:48:35 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:48:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:48:35 -0400
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mProject Load (14.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.4ms | Allocations: 2129)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 24ms (Views: 8.0ms | ActiveRecord: 14.5ms | Allocations: 4609)
+
+
+  [1m[36mAdmin Load (13.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 19.8ms | Allocations: 5479)
+
+
+  [1m[36mPattern Load (18.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 24ms (Views: 4.9ms | ActiveRecord: 18.4ms | Allocations: 4736)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:48:37 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:49:09 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1090)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:49:09 -0400
+Processing by PatternsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 00:49:09 -0400
+  [1m[36mPattern Load (1.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.7ms | Allocations: 1725)
+
+
+Processing by AdminsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:49:09 -0400
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.5ms | Allocations: 2310)
+
+
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1286)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:49:09 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (18.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 21ms (Views: 2.6ms | ActiveRecord: 18.1ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:49:47 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1090)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:50:05 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (2.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 2.0ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:51:17 -0400
+Started POST "/auth/login" for ::1 at 2020-06-16 00:51:17 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mPattern Load (2.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 2.1ms | Allocations: 1551)
+
+
+  [1m[36mAdmin Load (2.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 275ms (Views: 0.7ms | ActiveRecord: 2.8ms | Allocations: 2492)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:51:24 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.6ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:51:41 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1364)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:51:55 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1364)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:54:52 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:54:52 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 00:54:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:54:52 -0400
+  [1m[36mPattern Load (15.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mProject Load (84.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 88ms (Views: 71.8ms | ActiveRecord: 15.4ms | Allocations: 2799)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 89ms (Views: 3.8ms | ActiveRecord: 84.3ms | Allocations: 3644)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:54:52 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1457)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (11.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 2.1ms | ActiveRecord: 11.3ms | Allocations: 989)
+
+
+  [1m[36mAdmin Load (3.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 3110)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:54:58 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:54:58 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:54:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:54:58 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (3.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 3.9ms | Allocations: 935)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mProject Load (37.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 39ms (Views: 1.9ms | ActiveRecord: 37.2ms | Allocations: 5141)
+
+
+  [1m[36mPattern Load (47.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 49ms (Views: 2.1ms | ActiveRecord: 47.1ms | Allocations: 5658)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 00:54:58 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (61.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 63ms (Views: 0.2ms | ActiveRecord: 61.2ms | Allocations: 4898)
+
+
+  [1m[36mPattern Load (18.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 21ms (Views: 2.1ms | ActiveRecord: 18.8ms | Allocations: 2300)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 00:55:15 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 00:55:15 -0400
+Started GET "/admins" for ::1 at 2020-06-16 00:55:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 00:55:15 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (15.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 19ms (Views: 2.5ms | ActiveRecord: 15.8ms | Allocations: 1373)
+
+
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Started GET "/patterns" for ::1 at 2020-06-16 00:55:15 -0400
+  [1m[36mProject Load (15.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mAdmin Load (9.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 9.8ms | Allocations: 2965)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 20ms (Views: 4.6ms | ActiveRecord: 15.5ms | Allocations: 4370)
+
+
+  [1m[36mAdmin Load (15.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 15.3ms | Allocations: 3486)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (3.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.1ms | Allocations: 1364)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-16 01:03:39 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:03:39 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#login as HTML
+  [1m[36mPattern Load (1.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 2501)
+
+
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 339ms (Views: 6.4ms | ActiveRecord: 1.3ms | Allocations: 1934)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:06:33 -0400
+Started GET "/projects" for ::1 at 2020-06-16 01:06:33 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:06:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:06:33 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mPattern Load (1.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.7ms | Allocations: 2342)
+
+
+  [1m[36mProject Load (84.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 88ms (Views: 3.1ms | ActiveRecord: 84.8ms | Allocations: 2578)
+
+
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.4ms | Allocations: 1173)
+
+
+  [1m[36mAdmin Load (73.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 79ms (Views: 0.3ms | ActiveRecord: 73.4ms | Allocations: 2028)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:06:50 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:06:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:06:50 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:06:50 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 4.7ms | Allocations: 3386)
+
+
+  [1m[36mPattern Load (17.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 20ms (Views: 1.9ms | ActiveRecord: 17.5ms | Allocations: 3082)
+
+
+  [1m[36mAdmin Load (32.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (18.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 154ms (Views: 120.8ms | ActiveRecord: 32.7ms | Allocations: 3697)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 156ms (Views: 0.3ms | ActiveRecord: 18.2ms | Allocations: 4713)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:07:45 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:07:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:07:45 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mPattern Load (3.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mAdmin Load (3.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Started GET "/projects" for ::1 at 2020-06-16 01:07:45 -0400
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 2638)
+
+
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2270)
+
+
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 3.3ms | Allocations: 4271)
+
+
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (7.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 7.3ms | Allocations: 1090)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:07:53 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:07:53 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 01:07:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:07:53 -0400
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 7.2ms | Allocations: 1858)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1961)
+
+
+  [1m[36mAdmin Load (2.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 1254)
+
+
+  [1m[36mPattern Load (22.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 27ms (Views: 2.6ms | ActiveRecord: 22.5ms | Allocations: 7527)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:09:10 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:09:10 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:09:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:09:10 -0400
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (3.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 3.3ms | Allocations: 4794)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2432)
+
+
+  [1m[36mAdmin Load (17.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mProject Load (15.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 17.3ms | Allocations: 4531)
+
+
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 68ms (Views: 52.4ms | ActiveRecord: 15.0ms | Allocations: 3862)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:09:48 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:09:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:09:48 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:09:48 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (1.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 2.0ms | Allocations: 4517)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.4ms | Allocations: 3210)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 3104)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.5ms | Allocations: 5688)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:10:11 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:10:11 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:10:11 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:10:11 -0400
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.1ms | Allocations: 3949)
+
+
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.4ms | Allocations: 3887)
+
+
+  [1m[36mPattern Load (19.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (8.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 43ms (Views: 23.2ms | ActiveRecord: 19.1ms | Allocations: 3742)
+
+
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 24.2ms | Allocations: 5449)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:10:51 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:10:51 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:10:51 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.3ms | Allocations: 1436)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:10:51 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (5.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 5.3ms | Allocations: 3992)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (4.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 3954)
+
+
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1619)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:11:03 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:11:03 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:11:03 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by PatternsController#index as HTML
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Processing by AdminsController#index as HTML
+  [1m[36mPattern Load (1.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2945)
+
+
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.3ms | Allocations: 2913)
+
+
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 2419)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-16 01:11:13 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 304ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 988)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:11:13 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (3.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.5ms | Allocations: 1364)
+
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = $1[0m  [["admin_id", 5]]
+  [1m[36mProject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  [1m[36mProject Destroy (1.1ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns" WHERE "patterns"."admin_id" = $1[0m  [["admin_id", 5]]
+  [1m[36mPattern Destroy (1.9ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 2]]
+  [1m[36mPattern Destroy (0.4ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 3]]
+  [1m[36mPattern Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 4]]
+  [1m[36mPattern Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 5]]
+  [1m[36mAdmin Destroy (0.4ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "meow@meow.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (3.1ms)[0m  [1m[32mINSERT INTO "admins" ("username", "email", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "meowmeow"], ["email", "meow@meow.com"], ["password_digest", "$2a$12$g0mEaV2VgVwF0LOccHCURedCi..zgGL3QJOyc0MaOOdH58QWb4sba"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.5ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "garter"], ["difficulty", "easy"], ["yarn", "Bernat Blanket"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "slipknot"], ["difficulty", "hard"], ["yarn", "Mittens"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "rib"], ["difficulty", "easy"], ["yarn", "1 ball Manos del Uruguay Franca (100% Superwash Merino Wool; 150g/114yds)"], ["needle_size", "US 11 (8.00mm) 16” circular or DPNs"], ["gauge", "13 sts = 4” in 1 by 1 rib, relaxed"], ["admin_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pattern"], ["difficulty", "easy"], ["yarn", "Manos del Uruguay Serena (50g, approx. 170 yds; 60% baby\n      alpaca, 40% pima cotton),\n      2 skeins each MC and CC"], ["needle_size", "32” circular needle, US 4/3.75mm "], ["gauge", "24 sts and 38 rows = 4”/10cm in pattern stitch"], ["admin_id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Blanket"], ["instruction", "With 2 strands of yarn tog, cast on 60 sts.\nDo not join. Working back and forth across needle in rows, proceed as follows:\nKnit in rows (garter st), noting 1st row is WS, until piece from beg measures 62'' [157.5 cm] long, ending on a RS row. Cast off knitwise (WS). Abbreviations: Approx-Approximate(ly), Beg-Begin(ing), RS-Right Side, St(s)-Stitch(es), Tog-Together, WS-Wrong Side"], ["admin_id", 6], ["pattern_id", 6], ["title", "Stormy Weather Blanket"], ["image_url", "https://i.imgur.com/nsKiC3Z.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6958938882785727390)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6958938882785727390)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = $1[0m  [["admin_id", 6]]
+  [1m[36mProject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 9]]
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns" WHERE "patterns"."admin_id" = $1[0m  [["admin_id", 6]]
+  [1m[36mPattern Destroy (0.7ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 6]]
+  [1m[36mPattern Destroy (0.3ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 7]]
+  [1m[36mPattern Destroy (0.3ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 8]]
+  [1m[36mPattern Destroy (0.2ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 9]]
+  [1m[36mAdmin Destroy (0.4ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "meow@meow.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (2.3ms)[0m  [1m[32mINSERT INTO "admins" ("username", "email", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "meowmeow"], ["email", "meow@meow.com"], ["password_digest", "$2a$12$e7AWqcM0ZGZxBTzlXwWP9.u1ehlUP9fcD/UNyq4qRSMP.tNyGN0fS"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.4ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "garter"], ["difficulty", "easy"], ["yarn", "Bernat Blanket"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "slipknot"], ["difficulty", "hard"], ["yarn", "Mittens"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.4ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "rib"], ["difficulty", "easy"], ["yarn", "1 ball Manos del Uruguay Franca (100% Superwash Merino Wool; 150g/114yds)"], ["needle_size", "US 11 (8.00mm) 16” circular or DPNs"], ["gauge", "13 sts = 4” in 1 by 1 rib, relaxed"], ["admin_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pattern"], ["difficulty", "easy"], ["yarn", "Manos del Uruguay Serena (50g, approx. 170 yds; 60% baby\n      alpaca, 40% pima cotton),\n      2 skeins each MC and CC"], ["needle_size", "32” circular needle, US 4/3.75mm "], ["gauge", "24 sts and 38 rows = 4”/10cm in pattern stitch"], ["admin_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Blanket"], ["instruction", "With 2 strands of yarn tog, cast on 60 sts.\nDo not join. Working back and forth across needle in rows, proceed as follows:\nKnit in rows (garter st), noting 1st row is WS, until piece from beg measures 62'' [157.5 cm] long, ending on a RS row. Cast off knitwise (WS). Abbreviations: Approx-Approximate(ly), Beg-Begin(ing), RS-Right Side, St(s)-Stitch(es), Tog-Together, WS-Wrong Side"], ["admin_id", 7], ["pattern_id", 10], ["title", "Stormy Weather Blanket"], ["image_url", "https://i.imgur.com/nsKiC3Z.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."admin_id" = $1[0m  [["admin_id", 7]]
+  [1m[36mProject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 10]]
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns" WHERE "patterns"."admin_id" = $1[0m  [["admin_id", 7]]
+  [1m[36mPattern Destroy (0.6ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 10]]
+  [1m[36mPattern Destroy (0.3ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 11]]
+  [1m[36mPattern Destroy (0.3ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 12]]
+  [1m[36mPattern Destroy (0.4ms)[0m  [1m[31mDELETE FROM "patterns" WHERE "patterns"."id" = $1[0m  [["id", 13]]
+  [1m[36mAdmin Destroy (0.7ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "meow@meow.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (1.8ms)[0m  [1m[32mINSERT INTO "admins" ("username", "email", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "meowmeow"], ["email", "meow@meow.com"], ["password_digest", "$2a$12$39NoyHsqWOEAT/VMPPubz.i7bOW3PFSewLEuqowKadhrVlc.p0m2e"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (1.2ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "garter"], ["difficulty", "easy"], ["yarn", "Bernat Blanket"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "slipknot"], ["difficulty", "hard"], ["yarn", "Mittens"], ["needle_size", "US 19(15 mm) circular knitting needle 36'' long"], ["gauge", "5 sts and 10 rows = 4''[10cm] in garter st with 2 strands tog "], ["admin_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.2ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "rib"], ["difficulty", "easy"], ["yarn", "1 ball Manos del Uruguay Franca (100% Superwash Merino Wool; 150g/114yds)"], ["needle_size", "US 11 (8.00mm) 16” circular or DPNs"], ["gauge", "13 sts = 4” in 1 by 1 rib, relaxed"], ["admin_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPattern Create (0.3ms)[0m  [1m[32mINSERT INTO "patterns" ("name", "difficulty", "yarn", "needle_size", "gauge", "admin_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pattern"], ["difficulty", "easy"], ["yarn", "Manos del Uruguay Serena (50g, approx. 170 yds; 60% baby\n      alpaca, 40% pima cotton),\n      2 skeins each MC and CC"], ["needle_size", "32” circular needle, US 4/3.75mm "], ["gauge", "24 sts and 38 rows = 4”/10cm in pattern stitch"], ["admin_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Blanket"], ["instruction", "With 2 strands of yarn tog, cast on 60 sts.\nDo not join. Working back and forth across needle in rows, proceed as follows:\nKnit in rows (garter st), noting 1st row is WS, until piece from beg measures 62'' [157.5 cm] long, ending on a RS row. Cast off knitwise (WS). Abbreviations: Approx-Approximate(ly), Beg-Begin(ing), RS-Right Side, St(s)-Stitch(es), Tog-Together, WS-Wrong Side"], ["admin_id", 8], ["pattern_id", 14], ["title", "Stormy Weather Blanket"], ["image_url", "https://i.imgur.com/nsKiC3Z.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Hat"], ["instruction", "CO 50 sts. Join, being careful not to twist, and pm to show\nbeg of rnd.\nRnds 1-4: *K1, p1; rep from * to end of rnd.\nRnd 5: *P1, k1; rep from * to end of rnd.\nRnd 6: *K1, p1; rep from * to end of rnd.\nRnd 7: Rep Rnd 5.\nRnds 8-28: *K1, p1; rep from * to end of rnd.\nShape crown: Change to dpn when necessary.\nRnd 1: *K1, p1, k1; s2sp; (k1, p1) twice; rep from * to end of\nrnd. 40 sts.\nRnds 2, 4, and 6: Work sts as they appear.\nRnd 3: *K1, p1; s2sp; p1, k1, p1; rep from * to end of rnd. 30\nsts.\nRnd 5: *K1; s2sp; k1, p1; rep from * to end of rnd. 20 sts.\nRnd 7: *S2sp, p1; rep from * to end of rnd. 10 sts.\nCut yarn; thread through remaining sts and pull tight.\nMake 3” pompom and attach at top.\nWeave in ends."], ["admin_id", 8], ["pattern_id", 16], ["title", "Nina Hat"], ["image_url", "https://i.imgur.com/fjCnnK0.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Sock and Hat"], ["instruction", "STITCH GUIDE\nSock Rib\n(multiple of 4 sts)\nRnd 1: K1, p2, * k2, p2; rep from * to last st, k1.\nRep Rnd 1 for patt.\nHat Rib\n(multiple of 4 sts)\nRnd 1: * K2, p2; rep from * to end.\nRep Rnd 1 for patt.\nSOCKS\nCast on 32 (40, 48) sts. Distribute sts evenly bet\ndpns, pm, and join to work in the rnd.\nCuff/Leg\nWork Sock Rib until piece meas 3½ (4½, 5½)”\nfrom cast-on edge.\nHeel Flap\nNote: The Heel Flap is worked over first and last 8\n(10, 12) sts of the rnd. The remaining 16 (20, 24)\nsts will form the Top of the Foot.\nRow 1 (RS): K8 (10, 12), turn.\nRow 2 (WS): P16 (20, 24), turn.\nRow 3: [Sl 1, k1] 8 (10, 12) times, turn.\nRow 4: Sl 1, p15 (19, 23).\nRows 5-18 (22, 26): Rep Rows 3 & 4, 7 (9, 11)\ntimes.\nShape Heel with Short-Rows\nRow 1 (RS): K9 (11, 13), ssk, k1, turn.\nRow 2: Sl 1, p3, p2tog, p1, turn.\nRow 3: Sl 1, k4, ssk, k1, turn.\nRow 4: Sl 1, p5, p2tog, p1, turn.\nRow 5: Sl 1, k6, ssk, k1, turn.\nRow 6: Sl 1, p7, p2tog, p1, turn – 10 sts rem.\n2-3 yr. Size Only:\nRow 7: Sl 1, k8, ssk, k1, turn.\nRow 8: Sl 1, p9, p2tog, p1, turn – 12 sts rem.\n4-5 Year Sizes Only:\nRow 7: Sl 1, k8, ssk, k1, turn.\nRow 8: Sl 1, p9, p2tog, p1, turn.\nRow 9: Sl 1, k10, ssk, k1, turn.\nRow 10: Sl 1, p11, p2tog, p1 – 14 sts rem.\nAll Sizes\n10 (12, 14) sts rem for Heel.\nGusset\nSet-up Rnd: K5 (6, 7) Heel sts, pm to denote new\nbor, k5 (6, 7) Heel sts, pick up and knit 11 (13, 15)\nsts along side of Heel Flap, pm, work in est’d patt\nover 16 (20, 24) Instep sts, pm, pick up and knit\n11 (13, 15) sts along the other side of Heel Flap,\nk5 (6, 7) (to beg of rnd) – 48 (54, 68) total sts; 32\n(38, 44) Heel & Gusset sts; 16 (20, 24) Instep sts.\nDec Rnd: Knit to 3 sts bef m, k2tog, k1, work as\nest’d to m, k1, ssk, knit to end – 2 sts dec’d – 44\n(58, 60) sts rem.\nEven Rnd: Knit to m, work as est’d to m, knit to\nend.\nRep these Dec Rnd and Even Rnd, 7 (8, 9) more\ntimes – 14 (16, 18) sts dec’d, 32 (40, 48) sts rem.\nWork even as est’d until Foot meas 2 (3, 4)”, or 1\n(1¼, 1½)” less than desired length.\nShape Toe\nDec Rnd: Knit to 3 sts bef m, k2tog, k1, sl m, k1,\nssk, knit to 3 sts bef m, k2tog, k1, sl m, k1, ssk,\nknit to end – 4 sts dec’d, 28 (36, 44) sts rem.\nEven Rnd: Knit.\nRep these 2 rnds, 4 (5, 6) more times – 12 (16,\n20) sts rem. Place 6 (8, 10) Heel sts on one ndl\nand 6 (8, 10) Instep sts on separate ndl, holding them parallel to one another. Graft the two sets\nof sts tog using Kitchener st.\nFINISHING\nBlock to finished measurements and weave in\nends. Fold down cuff to wear.\nHAT\nCast on 88 (104, 120) sts. Distribute sts evenly\nbet dpns and join to work in the rnd. Work in Hat\nRib until piece meas 4½ (5, 6)”.\nShape Crown\nRnd 1: * K2, p2, k2tog, p2; rep from * to end – 11\n(13, 15) sts dec’d, 77 (91, 105) sts rem.\nRnd 2: * K2, p2, k1, p2; rep from * to end.\nRnd 3: * K2, p2tog, k1, p2; rep from * to end – 11\n(13, 15) sts dec’d, 66 (78, 90) sts rem.\nRnd 4: * K2, p1, k1, p2; rep from * to end.\nRnd 5: * K2tog, p1, k1, p2; rep from * to end – 11\n(13, 15) sts dec’d, 55 (65, 75) sts rem.\nRnd 6: * K1, p1, k1, p2; rep from * to end.\nRnd 7: * K1, p1, k1, p2tog; rep from * to end – 11\n(13, 15) sts dec’d, 44 (52, 60) sts rem.\nRnd 8: * K1, p1; rep from * to end.\nRnd 9: * K2tog; rep from * to end – 22 (26, 30)\nsts rem.\nRnd 10: * K2tog; rep from * to end – 11 (13, 15)\nsts rem.\nBaby only\nRnd 11: [K3tog] 3 times, k2tog – 4 sts rem.\nToddler only\nRnd 11: [K3tog] 4 times, k1 – 5 sts rem.\nRnd 12: K2tog, knit to end of round. – 4 sts rem.\nChild only\nRnd 11: [K3tog] 5 times – 5 sts rem.\nRnd 12: K2tog, knit to end of round. – 4 sts rem.\nAll Sizes\nWork in I-Cord over rem 4 sts for 4”. Bind off rem\n4 sts. Tie I-Cord in a knot."], ["admin_id", 8], ["pattern_id", 16], ["title", "Universal Yarn Itty Bitty Set"], ["image_url", "https://i.imgur.com/2BL7Gbk.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Blanket"], ["instruction", "Begin\nCast on 4 sts.\nRow 1: K2, yo, knit to end.\nRepeat row 1 until 1 cake has almost\nbeen used up. (about 170 sts on the\nneedle)\nNext row - Begin decreasing as\nfollows:\nK1, k2tog, yo, k2tog, knit to end.\nRepeat this decrease row until 4 sts\nremain.\nBind off. Weave in all ends."], ["admin_id", 8], ["pattern_id", 14], ["title", "Hot Cakes"], ["image_url", "https://i.imgur.com/ajxio2v.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("garment_type", "instruction", "admin_id", "pattern_id", "title", "image_url") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["garment_type", "Blanket"], ["instruction", "With MC, cast on 5 stitches. Knit 2 rows. Join CC.\nSET UP ROWS\nRow 1 (CC): k2, place marker (pm), yo, pm, k1, pm, yo,\npm, k2. 7 sts.\nRow 2 (CC): k2, slip marker (sm), p1, sm, k1, sm, p1, sm,\nk2.\nBODY\nRow 1: With MC, k2, sm, yo, k to next m, yo, sm, k1, sm, yo,\nk to last m, yo, sm, k2. 4 sts increased.\nRow 2: With MC, k to end of row, slipping markers as you\ncome to them.\nRow 3: With CC, k2, sm, yo, k to next m, yo, sm, k1, sm, yo,\nk to last m, yo, sm, k2. 4 sts increased.\nRow 4: With CC, k2, sm, p to next m, sm, k1, sm, p to last\nm, sm, k2.\nRep Rows 1-4 until shawl measure 54” across the top.\nBreak off CC and continue with MC.\nRep Rows 1-2 five times. Bind off loosely. Weave in ends;\nblock lightly."], ["admin_id", 8], ["pattern_id", 17], ["title", "Stormy Weather Blanket"], ["image_url", "https://i.imgur.com/aITnGRU.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/projects" for ::1 at 2020-06-16 01:13:09 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:13:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:13:10 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 01:13:10 -0400
+  [1m[36mPattern Load (2.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 24ms (Views: 11.2ms | ActiveRecord: 11.2ms | Allocations: 8231)
+
+
+Completed 200 OK in 36ms (Views: 11.2ms | ActiveRecord: 22.5ms | Allocations: 14135)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:13:10 -0400
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (4.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (7.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 28ms (Views: 4.3ms | ActiveRecord: 20.4ms | Allocations: 10233)
+
+
+  [1m[36mAdmin Load (10.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 0.2ms | ActiveRecord: 18.2ms | Allocations: 4730)
+
+
+Completed 200 OK in 44ms (Views: 10.2ms | ActiveRecord: 32.0ms | Allocations: 13136)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-16 01:13:30 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 245ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 998)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:13:30 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (6.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 6.6ms | Allocations: 1367)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-16 01:17:56 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:17:56 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#login as HTML
+  [1m[36mPattern Load (2.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  Parameters: {"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"meowmeow", "password"=>"[FILTERED]"}}}
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 2.1ms | Allocations: 2464)
+
+
+  [1m[36mAdmin Load (7.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "meowmeow"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 245ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 1836)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:18:02 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1367)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:18:06 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:18:34 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:18:34 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:18:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:18:34 -0400
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (4.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 4.5ms | Allocations: 2161)
+
+
+  [1m[36mAdmin Load (88.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 93ms (Views: 3.8ms | ActiveRecord: 88.7ms | Allocations: 2620)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 01:18:34 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (15.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mAdmin Load (2.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 140ms (Views: 0.3ms | ActiveRecord: 89.7ms | Allocations: 8022)
+
+
+  [1m[36mPattern Load (8.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 8.5ms | Allocations: 3043)
+
+
+Completed 200 OK in 63ms (Views: 8.4ms | ActiveRecord: 51.0ms | Allocations: 10191)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:19:23 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:19:23 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:19:23 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:19:23 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (8.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mPattern Load (3.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 8.2ms | Allocations: 5298)
+
+
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 3.7ms | Allocations: 4927)
+
+
+  [1m[36mAdmin Load (10.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (23.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 10.2ms | Allocations: 5124)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 23.1ms | Allocations: 2346)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 01:22:09 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 01:22:09 -0400
+Started GET "/admins" for ::1 at 2020-06-16 01:22:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 01:22:09 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by AdminsController#index as HTML
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (9.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 2.9ms | Allocations: 2307)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 23ms (Views: 12.9ms | ActiveRecord: 9.9ms | Allocations: 3200)
+
+
+  [1m[36mAdmin Load (32.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mAdmin Load (28.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 40ms (Views: 0.7ms | ActiveRecord: 32.1ms | Allocations: 4069)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 34ms (Views: 4.4ms | ActiveRecord: 28.6ms | Allocations: 4267)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:35:01 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (3.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 3.9ms | Allocations: 1405)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:43:17 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:43:17 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:43:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:43:17 -0400
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (6.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mPattern Load (5.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 30ms (Views: 21.3ms | ActiveRecord: 6.4ms | Allocations: 5041)
+
+
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 5.1ms | Allocations: 4422)
+
+
+  [1m[36mProject Load (21.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Started GET "/patterns" for ::1 at 2020-06-16 08:43:17 -0400
+Completed 200 OK in 26ms (Views: 4.1ms | ActiveRecord: 21.6ms | Allocations: 4616)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1367)
+
+
+  [1m[36mAdmin Load (9.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 16.5ms | Allocations: 6721)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:45:47 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:45:47 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:45:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:45:47 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mPattern Load (20.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mProject Load (14.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mAdmin Load (10.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 50ms (Views: 33.8ms | ActiveRecord: 14.7ms | Allocations: 4797)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (9.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 35.3ms | ActiveRecord: 10.0ms | Allocations: 3821)
+
+
+Completed 200 OK in 61ms (Views: 35.5ms | ActiveRecord: 20.5ms | Allocations: 5034)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 21.9ms | Allocations: 6030)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:45:47 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (3.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 3.9ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:48:12 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:48:12 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:48:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:48:12 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mPattern Load (24.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 43ms (Views: 18.6ms | ActiveRecord: 24.2ms | Allocations: 2337)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/patterns" for ::1 at 2020-06-16 08:48:12 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (97.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 103ms (Views: 3.9ms | ActiveRecord: 97.9ms | Allocations: 4811)
+
+
+  [1m[36mPattern Load (26.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (6.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mProject Load (150.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 81ms (Views: 53.5ms | ActiveRecord: 26.6ms | Allocations: 2521)
+
+
+Completed 200 OK in 137ms (Views: 0.3ms | ActiveRecord: 54.7ms | Allocations: 5228)
+
+
+Completed 200 OK in 405ms (Views: 249.3ms | ActiveRecord: 150.6ms | Allocations: 10638)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:48:58 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:48:58 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:48:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:48:58 -0400
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mPattern Load (1.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mProject Load (5.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.2ms | Allocations: 4158)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 3369)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 5.1ms | Allocations: 7094)
+
+
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 2.0ms | Allocations: 5856)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:48:59 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:49:19 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:49:19 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:49:19 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mPattern Load (0.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.8ms | Allocations: 3248)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 3139)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:49:19 -0400
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.3ms | Allocations: 4309)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 927)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:49:19 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:50:50 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:50:50 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:50:50 -0400
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mAdmin Load (4.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mPattern Load (1.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:50:50 -0400
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.7ms | Allocations: 3610)
+
+
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 4.4ms | Allocations: 3323)
+
+
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 4.1ms | Allocations: 5036)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 837)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:50:50 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (53.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 56ms (Views: 2.4ms | ActiveRecord: 53.1ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:54:29 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:54:29 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:54:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:54:29 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Processing by ProjectsController#index as HTML
+  [1m[36mAdmin Load (38.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 2.1ms | Allocations: 1630)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 58ms (Views: 0.7ms | ActiveRecord: 38.5ms | Allocations: 3871)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (9.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mPattern Load (1.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.5ms | Allocations: 2029)
+
+
+Completed 200 OK in 58ms (Views: 48.4ms | ActiveRecord: 9.2ms | Allocations: 4846)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:54:30 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:55:42 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:55:42 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:55:42 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by AdminsController#index as HTML
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.7ms | Allocations: 3411)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:55:42 -0400
+  [1m[36mPattern Load (6.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mAdmin Load (4.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 6.1ms | Allocations: 4967)
+
+
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 4.4ms | Allocations: 4190)
+
+
+  [1m[36mAdmin Load (10.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 10.2ms | Allocations: 1052)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:55:42 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.8ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:55:50 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:55:50 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:55:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:55:50 -0400
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (8.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 8.6ms | Allocations: 4339)
+
+
+  [1m[36mAdmin Load (12.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 12.9ms | Allocations: 4436)
+
+
+  [1m[36mProject Load (34.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 64ms (Views: 29.4ms | ActiveRecord: 34.0ms | Allocations: 5418)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:55:51 -0400
+  [1m[36mAdmin Load (53.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 53.8ms | Allocations: 5335)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (4.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 4.9ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:56:16 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:56:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:56:16 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:56:16 -0400
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (82.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 85ms (Views: 0.3ms | ActiveRecord: 82.7ms | Allocations: 2793)
+
+
+  [1m[36mPattern Load (79.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 82ms (Views: 2.2ms | ActiveRecord: 79.1ms | Allocations: 3273)
+
+
+  [1m[36mAdmin Load (26.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mProject Load (95.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Started GET "/patterns" for ::1 at 2020-06-16 08:56:17 -0400
+Completed 200 OK in 44ms (Views: 17.3ms | ActiveRecord: 26.1ms | Allocations: 4340)
+
+
+Completed 200 OK in 113ms (Views: 17.1ms | ActiveRecord: 95.8ms | Allocations: 8051)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:57:35 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:57:35 -0400
+Processing by PatternsController#index as HTML
+Processing by ProjectsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 08:57:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:57:35 -0400
+  [1m[36mPattern Load (16.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 19ms (Views: 1.7ms | ActiveRecord: 16.9ms | Allocations: 2201)
+
+
+  [1m[36mProject Load (24.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 26ms (Views: 2.0ms | ActiveRecord: 24.3ms | Allocations: 3693)
+
+
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 935)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Started GET "/patterns" for ::1 at 2020-06-16 08:57:35 -0400
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1155)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.3ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:58:28 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:58:28 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:58:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:58:28 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mProject Load (6.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 6.5ms | Allocations: 4478)
+
+
+  [1m[36mPattern Load (4.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 4.6ms | Allocations: 4994)
+
+
+  [1m[36mAdmin Load (3.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[36mAdmin Load (21.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 3.3ms | Allocations: 5114)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 21.4ms | Allocations: 4971)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:58:28 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (18.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 22ms (Views: 3.2ms | ActiveRecord: 18.4ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:58:49 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.6ms | Allocations: 1483)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:58:49 -0400
+Processing by PatternsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 08:58:49 -0400
+  [1m[36mPattern Load (5.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 5.3ms | Allocations: 1717)
+
+
+Processing by AdminsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:58:49 -0400
+  [1m[36mAdmin Load (3.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 3.8ms | Allocations: 2198)
+
+
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1052)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:58:54 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.3ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 08:59:24 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 08:59:24 -0400
+Started GET "/admins" for ::1 at 2020-06-16 08:59:24 -0400
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.7ms | Allocations: 956)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 08:59:24 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (1.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mProject Load (10.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 2236)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 3677)
+
+
+Completed 200 OK in 16ms (Views: 5.3ms | ActiveRecord: 10.7ms | Allocations: 6812)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 08:59:24 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 09:00:41 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 09:00:41 -0400
+Started GET "/admins" for ::1 at 2020-06-16 09:00:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:00:41 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mPattern Load (3.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 4.4ms | Allocations: 4298)
+
+
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 3.1ms | Allocations: 4816)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 2.6ms | Allocations: 4482)
+
+
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 4756)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:00:41 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1367)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 09:00:59 -0400
+Processing by ProjectsController#index as HTML
+Started GET "/patterns" for ::1 at 2020-06-16 09:00:59 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (4.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mPattern Load (3.2ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 4.6ms | Allocations: 2816)
+
+
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 3.2ms | Allocations: 3090)
+
+
+Started GET "/admins" for ::1 at 2020-06-16 09:00:59 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 935)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:00:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 837)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:00:59 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1368)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:05:26 -0400
+Started GET "/projects" for ::1 at 2020-06-16 09:05:26 -0400
+Processing by PatternsController#index as HTML
+Started GET "/admins" for ::1 at 2020-06-16 09:05:26 -0400
+  [1m[36mPattern Load (4.7ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 4.7ms | Allocations: 1725)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:05:26 -0400
+Processing by ProjectsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by AdminsController#index as HTML
+  [1m[36mProject Load (4.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 4.3ms | Allocations: 3465)
+
+
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.1ms | Allocations: 2482)
+
+
+  [1m[36mAdmin Load (10.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 10.2ms | Allocations: 3640)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:05:26 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.9ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.9ms | Allocations: 1368)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 09:22:41 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 09:22:41 -0400
+Started GET "/admins" for ::1 at 2020-06-16 09:22:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:22:41 -0400
+Processing by ProjectsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by PatternsController#index as HTML
+  [1m[36mProject Load (32.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 47ms (Views: 10.2ms | ActiveRecord: 32.0ms | Allocations: 2983)
+
+
+  [1m[36mAdmin Load (51.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 56ms (Views: 4.6ms | ActiveRecord: 51.0ms | Allocations: 3773)
+
+
+  [1m[36mPattern Load (69.6ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 74ms (Views: 3.2ms | ActiveRecord: 69.6ms | Allocations: 4519)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:22:42 -0400
+Processing by PatternsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (14.1ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 17ms (Views: 2.8ms | ActiveRecord: 14.1ms | Allocations: 2530)
+
+
+  [1m[36mAdmin Load (90.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 111ms (Views: 0.6ms | ActiveRecord: 92.6ms | Allocations: 2413)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 09:27:11 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 09:27:11 -0400
+Started GET "/admins" for ::1 at 2020-06-16 09:27:11 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:27:11 -0400
+Processing by ProjectsController#index as HTML
+Processing by PatternsController#index as HTML
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPattern Load (38.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  [1m[36mAdmin Load (30.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 50ms (Views: 10.7ms | ActiveRecord: 38.4ms | Allocations: 4036)
+
+
+Completed 200 OK in 43ms (Views: 11.8ms | ActiveRecord: 30.7ms | Allocations: 3236)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:27:11 -0400
+  [1m[36mProject Load (57.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 77ms (Views: 15.2ms | ActiveRecord: 57.7ms | Allocations: 6684)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.5ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms | Allocations: 1367)
+
+
+  [1m[36mAdmin Load (5.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 61ms (Views: 0.3ms | ActiveRecord: 37.9ms | Allocations: 7894)
+
+
+Started GET "/projects" for ::1 at 2020-06-16 09:27:22 -0400
+Started GET "/patterns" for ::1 at 2020-06-16 09:27:22 -0400
+Started GET "/admins" for ::1 at 2020-06-16 09:27:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-16 09:27:22 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 1467)
+
+
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (1.0ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.0ms | Allocations: 1367)
+
+
+Processing by AdminsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mAdmin Load (18.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 7.7ms | ActiveRecord: 18.4ms | Allocations: 1978)
+
+
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1948)
+
+
+Started GET "/patterns" for ::1 at 2020-06-16 09:27:22 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.4ms)[0m  [1m[34mSELECT "patterns".* FROM "patterns"[0m
+  ↳ app/controllers/patterns_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1367)
+
+
