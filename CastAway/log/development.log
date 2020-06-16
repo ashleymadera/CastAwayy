@@ -19524,3 +19524,8 @@ Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 10.4ms | Allocations: 375
 Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 1286)
 
 
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/CastAway/bin/rails:9)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/CastAway/bin/rails:9)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway_api/bin/rails:9)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway_api/bin/rails:9)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at /Users/ashleymadera/General_Assembly/sei/apollo/unit_4/project/CastAway/castaway-app/bin/rails:9)
