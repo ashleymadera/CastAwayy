@@ -10,6 +10,12 @@ export default class UpdatePattern extends Component {
     gauge: ""
   }
 
+  componentDidMount() {
+    if (this.props.pattern) {
+      this.setPattern()
+    }
+  }
+
   componentDidUpdate(prevProps) {
     if (prevProps.pattern !== this.props.pattern) {
       this.setPattern()

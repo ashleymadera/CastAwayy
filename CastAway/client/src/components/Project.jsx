@@ -3,21 +3,19 @@ import { withRouter } from "react-router-dom"
 
 
 function Project(props) {
-  const { project } = props
-
-
-  // console.log(id)
+  const { project, destroyProject, currentAdmin, history } = props
 
   return (
     <div>
-      <h2>{project.title}</h2>
-      {/* {
-        project.map((pro) => (
-          pro.id === props.match.params.id ?
-            <h2>{pro.title}</h2>
-            :
-            'Nothing found'
-        ))} */}
+      <h2>{props.project.title}</h2>
+      {
+        currentAdmin && currentAdmin.id === project.admin_id && (
+          <>
+            <button onClick={() => history.push(`/project/${project.id}/edit`)}>EDIT</button>
+            <button onClick={() => destroyProject(project.id)}>DELETE</button>
+          </>
+        )
+      }
 
     </div>
   )

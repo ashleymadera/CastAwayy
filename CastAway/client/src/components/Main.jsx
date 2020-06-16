@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import { getAllProjects, createProject, deleteProject, updateProject, getAProject } from '../services/projects';
-import { getAllPatterns, createPattern, updatePattern } from "../services/patterns"
+import { getAllPatterns, createPattern, updatePattern, deletePattern } from "../services/patterns"
 import { getAllAdmins } from "../services/admins"
 import Project from "./Project"
 import ShowProjects from "./ShowProjects"
@@ -15,7 +15,7 @@ import ShowPatterns from './ShowPatterns'
 
 
 
-export default class Main extends Component {
+class Main extends Component {
 
   state = {
     projects: [],
@@ -28,7 +28,6 @@ export default class Main extends Component {
     this.getProjects()
     this.getPatterns()
     this.getAdmins()
-    this.getAProject()
   }
 
 
@@ -64,19 +63,19 @@ export default class Main extends Component {
     }))
   }
 
-  // destroyPattern = async (id) => {
-  //   await deletePattern(id)
-  //   this.setState(prevState => ({
-  //     pattern: prevState.patterns.filter(pattern => pattern.id !== id)
-  //   }))
-  // }
+  destroyPattern = async (id) => {
+    await deletePattern(id)
+    this.setState(prevState => ({
+      pattern: prevState.patterns.filter(pattern => pattern.id !== id)
+    }))
+  }
 
   // ============================
   // ========= projects =========
   // ============================
 
   getAProject = async (id) => {
-    const project = await getAProject(`/projects/${id}`)
+    const project = await getAProject(id)
     this.setState({ project })
   }
 
@@ -104,8 +103,9 @@ export default class Main extends Component {
   destroyProject = async (id) => {
     await deleteProject(id)
     this.setState(prevState => ({
-      project: prevState.projects.filter(project => project.id !== id)
-    }))
+      projects: prevState.projects.filter(project => project.id !== id)
+    }), () => this.props.history.push('/projects'))
+
   }
 
   render() {
@@ -115,7 +115,14 @@ export default class Main extends Component {
         {/*  // ============================
              // =========== auth ===========
              // ============================ */}
-        <Route path='/'></Route>
+        <Route exact path='/'>
+          (<ShowProjects
+            currentAdmin={this.props.currentAdmin}
+            admins={this.state.admins}
+            projects={this.state.projects}
+            destroyProject={this.props.destroyProject}
+          />)
+        </Route>
         <Route path='/admin/login' render={(props) => (
           <Login
             {...props}
@@ -135,6 +142,7 @@ export default class Main extends Component {
         <Route exact path='/projects'
           render={() =>
             (<ShowProjects
+              currentAdmin={this.props.currentAdmin}
               admins={this.state.admins}
               projects={this.state.projects}
               destroyProject={this.props.destroyProject}
@@ -147,10 +155,15 @@ export default class Main extends Component {
              // ====== ProjectDetails ======
              // ============================ */}
 
-        <Route exact path='/Projects/:id' render={(props) => (
+        <Route path='/projects/:id' render={(props) => (
           <Project
             {...props}
-            project={this.state.project} />
+            project={this.state.projects.find((p) => (
+              parseInt(props.match.params.id) === p.id
+            )) || {}}
+            currentAdmin={this.props.currentAdmin}
+            destroyProject={this.destroyProject}
+          />
         )} >
 
         </Route>
@@ -206,7 +219,7 @@ export default class Main extends Component {
           return <UpdatePattern
             {...props}
             pattern={pattern}
-            // patterns={this.state.patterns}
+            patterns={this.state.patterns}
             putPattern={this.putPattern} />
         }}>
         </Route>
@@ -216,3 +229,4 @@ export default class Main extends Component {
   }
 }
 
+export default withRouter(Main)

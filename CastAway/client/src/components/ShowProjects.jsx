@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Route } from 'react-router-dom'
 import Project from "./Project"
-import { getAllPatterns } from '../services/patterns'
+import { getAllPatterns, deletePattern } from '../services/patterns'
 import ShowPatterns from './ShowPatterns'
+import Pattern from './Pattern'
 
 export default function ShowProjects(props) {
 
-  const { projects, currentAdmin, destroyProject, history } = props
+  const { projects, currentAdmin, desttoyPattern, destroyProject, history } = props
   const [patternList, setList] = useState([])
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function ShowProjects(props) {
           projects.map((project) => (
             <React.Fragment key={project.id}>
               <div >
-                <Link to={`/Projects/${project.id}`}>{project.title}
+                <Link to={!currentAdmin ? '/' : `/projects/${project.id}`}>{project.title}
                   <br />
                   <img src={project.image_url}
                     alt="image"
@@ -45,15 +46,22 @@ export default function ShowProjects(props) {
             </React.Fragment>
           ))
         }
+
       </div>
-
-
       <Route path="/projects">
-        <ShowPatterns results={patternList} />
+        <ShowPatterns results={patternList}
+        />
       </Route>
-      {/* <Route exact path={`/Project/${project.id}`} component={Project} >
-        <Project project={this.state.projects} />
-      </Route> */}
+      <Route exact path={`/pattern/${patternList.id}`} render={(props) => (
+        <Pattern
+          pattern={props.patternList.find((p) => (
+            parseInt(props.match.params.id) === p.id
+          )) || {}}
+          currentAdmin={currentAdmin}
+          destroyPattern={props.destroyPattern}
+        />
+      )} >
+      </Route>
     </>
   )
 }

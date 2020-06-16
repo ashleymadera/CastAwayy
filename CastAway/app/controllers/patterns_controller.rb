@@ -58,3 +58,4 @@ class PatternsController < ApplicationController
     end
     
   
+    

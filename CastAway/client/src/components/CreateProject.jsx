@@ -10,8 +10,6 @@ export default class CreateProject extends Component {
     pattern: ""
   }
 
-  //default  pattern in drop down
-
   componentDidUpdate = () => {
     if (!this.state.pattern && this.props.patterns.length) {
       this.setState({
@@ -52,13 +50,9 @@ export default class CreateProject extends Component {
     this.setState({ image_url: value })
   }
 
-
-
   render() {
     const { title, garment_type, instruction, image_url } = this.state
     const { postProject, history, patterns } = this.props
-
-
     return (
       <>
         <h2 className='project-form'>CREATE A PROJECT</h2>

@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_project, only: %i[show update destroy]
-  before_action :set_pattern, only: %i[create]
+  before_action :set_pattern, only: %i[create, update]
 
     # GET /projects
     def index
@@ -32,12 +32,13 @@ class ProjectsController < ApplicationController
     # PATCH/PUT /projects/1
     def update
       if @project.update(project_params)
-  
+      
         render json: @project
       else
         render json: @project.errors, status: :unprocessable_entity
       end
-    end
+   
+  end
   
     # DELETE /projects/1
     def destroy

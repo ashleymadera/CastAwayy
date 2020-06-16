@@ -12,7 +12,7 @@ export default class UpdateProject extends Component {
 
   componentDidMount() {
     if (this.props.project) {
-      this.SetProject()
+      this.setProject()
     }
   }
 
@@ -68,11 +68,14 @@ export default class UpdateProject extends Component {
 
   render() {
     const { title, garment_type, instruction, image_url, pattern } = this.state
-    const { putProject, history, project, patterns } = this.props
+    const { putProject, history, patterns } = this.props
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
-        putProject(pattern, project.id, this.state);
+        const {
+          pattern, project, ...projectData
+        } = this.state
+        putProject(this.props.project.id, this.props.project.id, projectData);
         history.push('/project');
         this.setState({
           title: "",
